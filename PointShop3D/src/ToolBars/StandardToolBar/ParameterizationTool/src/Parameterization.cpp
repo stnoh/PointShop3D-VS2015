@@ -266,7 +266,7 @@ STOP_PERFMEASURING("Multigrid_solution");
 //		statusBar->showMessage ("Assigning texture to selection...", -1);
 
 //		this->assignTexture ();
-		fprintf(stderr, "[TODO?] this->assignTexture ();\n");
+//		fprintf(stderr, "[TODO?] this->assignTexture ();\n");
 
 		////////////////////////////////////////////////////////////
 		// export data
