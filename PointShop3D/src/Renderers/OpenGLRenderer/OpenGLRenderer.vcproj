@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="OpenGLRenderer"
+	SccProjectName=""
+	SccLocalPath="">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory=".\bin\win32\Release"
+			IntermediateDirectory=".\bin\win32\Release"
+			ConfigurationType="2"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="2"
+				InlineFunctionExpansion="1"
+				AdditionalIncludeDirectories="$(QTDIR)\include,..\..\Core\DataStructures\src\,..\..\Core\Interfaces\src"
+				PreprocessorDefinitions="RENDERER_EXPORTS;WIN32;NDEBUG;_WINDOWS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL"
+				StringPooling="TRUE"
+				RuntimeLibrary="2"
+				EnableFunctionLevelLinking="TRUE"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderFile=".\bin\win32\Release/OpenGLRenderer.pch"
+				AssemblerListingLocation=".\bin\win32\Release/"
+				ObjectFile=".\bin\win32\Release/"
+				ProgramDataBaseFileName=".\bin\win32\Release/"
+				BrowseInformation="1"
+				WarningLevel="3"
+				SuppressStartupBanner="TRUE"
+				CompileAs="0"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="$(QTDIR)\lib\$(QTLIB) opengl32.lib glu32.lib"
+				OutputFile=".\bin\win32\Release/OpenGLRenderer.dll"
+				LinkIncremental="1"
+				SuppressStartupBanner="TRUE"
+				ProgramDatabaseFile=".\bin\win32\Release/OpenGLRenderer.pdb"
+				ImportLibrary=".\bin\win32\Release/OpenGLRenderer.lib"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="NDEBUG"
+				MkTypLibCompatible="TRUE"
+				SuppressStartupBanner="TRUE"
+				TargetEnvironment="1"
+				TypeLibraryName=".\bin\win32\Release/OpenGLRenderer.tlb"
+				HeaderFileName=""/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				Description="-- Installing Renderer OpenGLRenderer --"
+				CommandLine="IF NOT EXIST ..\..\..\bin mkdir ..\..\..\bin
+IF NOT EXIST ..\..\..\bin\win32 mkdir ..\..\..\bin\win32
+IF NOT EXIST ..\..\..\bin\win32\Release mkdir ..\..\..\bin\win32\Release
+IF NOT EXIST ..\..\..\bin\win32\Release\Renderers mkdir ..\..\..\bin\win32\Release\Renderers
+IF NOT EXIST ..\..\..\bin\win32\Release\Renderers\preview mkdir ..\..\..\bin\win32\Release\Renderers\preview
+copy bin\win32\Release\OpenGLRenderer.dll ..\..\..\bin\win32\Release\Renderers\preview
+"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="2055"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory=".\bin\win32\Debug"
+			IntermediateDirectory=".\bin\win32\Debug"
+			ConfigurationType="2"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories="$(QTDIR)\include"
+				PreprocessorDefinitions="RENDERER_EXPORTS;WIN32;_DEBUG;_WINDOWS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="2"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderFile=".\bin\win32\Debug/OpenGLRenderer.pch"
+				AssemblerListingLocation=".\bin\win32\Debug/"
+				ObjectFile=".\bin\win32\Debug/"
+				ProgramDataBaseFileName=".\bin\win32\Debug/"
+				BrowseInformation="1"
+				WarningLevel="3"
+				SuppressStartupBanner="TRUE"
+				DebugInformationFormat="4"
+				CompileAs="0"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="$(QTDIR)\lib\$(QTLIB) opengl32.lib glu32.lib"
+				OutputFile=".\bin\win32\Debug/OpenGLRenderer.dll"
+				LinkIncremental="2"
+				SuppressStartupBanner="TRUE"
+				AdditionalLibraryDirectories="../../../external/lib-Win32"
+				GenerateDebugInformation="TRUE"
+				ProgramDatabaseFile=".\bin\win32\Debug/OpenGLRenderer.pdb"
+				ImportLibrary=".\bin\win32\Debug/OpenGLRenderer.lib"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="_DEBUG"
+				MkTypLibCompatible="TRUE"
+				SuppressStartupBanner="TRUE"
+				TargetEnvironment="1"
+				TypeLibraryName=".\bin\win32\Debug/OpenGLRenderer.tlb"
+				HeaderFileName=""/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				Description="-- Installing Renderer OpenGLRenderer --"
+				CommandLine="IF NOT EXIST ..\..\..\bin mkdir ..\..\..\bin
+IF NOT EXIST ..\..\..\bin\win32 mkdir ..\..\..\bin\win32
+IF NOT EXIST ..\..\..\bin\win32\Debug mkdir ..\..\..\bin\win32\Debug
+IF NOT EXIST ..\..\..\bin\win32\Debug\Renderers mkdir ..\..\..\bin\win32\Debug\Renderers
+IF NOT EXIST ..\..\..\bin\win32\Debug\Renderers\preview mkdir ..\..\..\bin\win32\Debug\Renderers\preview
+copy bin\win32\Debug\OpenGLRenderer.dll ..\..\..\bin\win32\Debug\Renderers\preview
+"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="2055"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
+			<File
+				RelativePath="src\OpenGLRenderer.cpp">
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="RENDERER_EXPORTS;WIN32;NDEBUG;_WINDOWS;_MBCS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="RENDERER_EXPORTS;WIN32;_DEBUG;_WINDOWS;_MBCS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\OpenGLRendererConfiguration.cpp">
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="RENDERER_EXPORTS;WIN32;NDEBUG;_WINDOWS;_MBCS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="RENDERER_EXPORTS;WIN32;_DEBUG;_WINDOWS;_MBCS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\OpenGLRendererWidget.cpp">
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="RENDERER_EXPORTS;WIN32;NDEBUG;_WINDOWS;_MBCS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="RENDERER_EXPORTS;WIN32;_DEBUG;_WINDOWS;_MBCS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl">
+			<File
+				RelativePath="src\OpenGLRenderer.h">
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Moc&apos;ing $(InputName).h ..."
+						CommandLine="%qtdir%\bin\moc.exe &quot;$(InputDir)$(InputName).h&quot; -o &quot;$(InputDir)moc_$(InputName).cpp&quot;
+"
+						Outputs="&quot;$(InputDir)moc_$(InputName).cpp&quot;"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Moc&apos;ing $(InputName).h ..."
+						CommandLine="%qtdir%\bin\moc.exe &quot;$(InputDir)$(InputName).h&quot; -o &quot;$(InputDir)moc_$(InputName).cpp&quot;
+"
+						Outputs="&quot;$(InputDir)moc_$(InputName).cpp&quot;"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\OpenGLRendererConfiguration.h">
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Moc&apos;ing $(InputName).h ..."
+						CommandLine="%qtdir%\bin\moc.exe &quot;$(InputDir)$(InputName).h&quot; -o &quot;$(InputDir)moc_$(InputName).cpp&quot;
+"
+						Outputs="&quot;$(InputDir)moc_$(InputName).cpp&quot;"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Moc&apos;ing $(InputName).h ..."
+						CommandLine="%qtdir%\bin\moc.exe &quot;$(InputDir)$(InputName).h&quot; -o &quot;$(InputDir)moc_$(InputName).cpp&quot;
+"
+						Outputs="&quot;$(InputDir)moc_$(InputName).cpp&quot;"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\OpenGLRendererWidget.h">
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Moc&apos;ing $(InputName).h ..."
+						CommandLine="%qtdir%\bin\moc.exe &quot;$(InputDir)$(InputName).h&quot; -o &quot;$(InputDir)moc_$(InputName).cpp&quot;
+"
+						Outputs="&quot;$(InputDir)moc_$(InputName).cpp&quot;"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Moc&apos;ing $(InputName).h ..."
+						CommandLine="%qtdir%\bin\moc.exe &quot;$(InputDir)$(InputName).h&quot; -o &quot;$(InputDir)moc_$(InputName).cpp&quot;
+"
+						Outputs="&quot;$(InputDir)moc_$(InputName).cpp&quot;"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\varptsiz.vp.h">
+			</File>
+			<Filter
+				Name="win32"
+				Filter="">
+				<File
+					RelativePath="src\win32\glext.h">
+				</File>
+				<File
+					RelativePath="src\win32\glh_genext.h">
+				</File>
+				<File
+					RelativePath="src\win32\glh_obs.h">
+				</File>
+				<File
+					RelativePath="src\win32\wglext.h">
+				</File>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe">
+			<File
+				RelativePath="src\varptsiz.vp">
+			</File>
+		</Filter>
+		<Filter
+			Name="Auto-Generated"
+			Filter="">
+			<File
+				RelativePath="SRC\moc_OpenGLRenderer.cpp">
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="RENDERER_EXPORTS;WIN32;NDEBUG;_WINDOWS;_MBCS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="RENDERER_EXPORTS;WIN32;_DEBUG;_WINDOWS;_MBCS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\moc_OpenGLRendererConfiguration.cpp">
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="RENDERER_EXPORTS;WIN32;NDEBUG;_WINDOWS;_MBCS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="RENDERER_EXPORTS;WIN32;_DEBUG;_WINDOWS;_MBCS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="UI\moc_openglrendererconfigurationwidget.cpp">
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="RENDERER_EXPORTS;WIN32;NDEBUG;_WINDOWS;_MBCS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="RENDERER_EXPORTS;WIN32;_DEBUG;_WINDOWS;_MBCS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="src\moc_OpenGLRendererWidget.cpp">
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="RENDERER_EXPORTS;WIN32;NDEBUG;_WINDOWS;_MBCS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="RENDERER_EXPORTS;WIN32;_DEBUG;_WINDOWS;_MBCS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="UI\openglrendererconfigurationwidget.cpp">
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="RENDERER_EXPORTS;WIN32;NDEBUG;_WINDOWS;_MBCS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="RENDERER_EXPORTS;WIN32;_DEBUG;_WINDOWS;_MBCS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="UI\openglrendererconfigurationwidget.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="User Interfaces (UI)"
+			Filter="*.ui">
+			<File
+				RelativePath="UI\OpenGLRendererConfigurationWidget.ui">
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Uic&apos;ing $(InputName).ui ..."
+						CommandLine="%qtdir%\bin\uic.exe &quot;$(InputPath)&quot; -o &quot;$(InputDir)$(InputName).h&quot;
+%qtdir%\bin\uic.exe &quot;$(InputPath)&quot; -i &quot;$(InputName)&quot;.h -o &quot;$(InputDir)$(InputName)&quot;.cpp
+%qtdir%\bin\moc.exe &quot;$(InputDir)$(InputName).h&quot; -o &quot;$(InputDir)moc_$(InputName).cpp&quot;
+"
+						Outputs="&quot;$(InputDir)$(InputName).h&quot;;$(InputDir)$(InputName).cpp;&quot;$(InputDir)moc_$(InputName).cpp&quot;"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Uic&apos;ing $(InputName).ui ..."
+						CommandLine="%qtdir%\bin\uic.exe &quot;$(InputPath)&quot; -o &quot;$(InputDir)$(InputName).h&quot;
+%qtdir%\bin\uic.exe &quot;$(InputPath)&quot; -i &quot;$(InputName)&quot;.h -o &quot;$(InputDir)$(InputName)&quot;.cpp
+%qtdir%\bin\moc.exe &quot;$(InputDir)$(InputName).h&quot; -o &quot;$(InputDir)moc_$(InputName).cpp&quot;
+"
+						Outputs="&quot;$(InputDir)$(InputName).h&quot;;$(InputDir)$(InputName).cpp;&quot;$(InputDir)moc_$(InputName).cpp&quot;"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Linux Project Files"
+			Filter="*.pro">
+			<File
+				RelativePath="OpenGLRenderer.pro">
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

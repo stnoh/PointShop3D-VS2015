@@ -1,0 +1,175 @@
+<!DOCTYPE UI><UI>
+<class>OpenGLRendererConfigurationWidget</class>
+<widget>
+    <class>QWidget</class>
+    <property stdset="1">
+        <name>name</name>
+        <cstring>OpenGLRendererConfigurationWidget</cstring>
+    </property>
+    <property>
+        <name>geometry</name>
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>735</width>
+            <height>381</height>
+        </rect>
+    </property>
+    <property>
+        <name>caption</name>
+        <string>OpenGLRendererConfigurationWidget</string>
+    </property>
+    <widget>
+        <class>QGroupBox</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>GroupBox1</cstring>
+        </property>
+        <property>
+            <name>geometry</name>
+            <rect>
+                <x>20</x>
+                <y>10</y>
+                <width>400</width>
+                <height>180</height>
+            </rect>
+        </property>
+        <property>
+            <name>title</name>
+            <string>OpenGL Renderer Settings</string>
+        </property>
+        <widget>
+            <class>QLayoutWidget</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>Layout1</cstring>
+            </property>
+            <property>
+                <name>geometry</name>
+                <rect>
+                    <x>20</x>
+                    <y>25</y>
+                    <width>117</width>
+                    <height>45</height>
+                </rect>
+            </property>
+            <grid>
+                <property>
+                    <name>margin</name>
+                    <number>0</number>
+                </property>
+                <property>
+                    <name>spacing</name>
+                    <number>6</number>
+                </property>
+                <widget row="1"  column="0" >
+                    <class>QCheckBox</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>smoothPointCheckBox</cstring>
+                    </property>
+                    <property>
+                        <name>text</name>
+                        <string>Smooth Points</string>
+                    </property>
+                </widget>
+                <widget row="0"  column="0" >
+                    <class>QCheckBox</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>constantPointSizeCheckBox</cstring>
+                    </property>
+                    <property>
+                        <name>text</name>
+                        <string>Constant Point Size</string>
+                    </property>
+                </widget>
+            </grid>
+        </widget>
+        <widget>
+            <class>QLayoutWidget</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>Layout2</cstring>
+            </property>
+            <property>
+                <name>geometry</name>
+                <rect>
+                    <x>20</x>
+                    <y>80</y>
+                    <width>168</width>
+                    <height>24</height>
+                </rect>
+            </property>
+            <grid>
+                <property>
+                    <name>margin</name>
+                    <number>0</number>
+                </property>
+                <property>
+                    <name>spacing</name>
+                    <number>6</number>
+                </property>
+                <widget row="0"  column="0" >
+                    <class>QLabel</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>TextLabel1</cstring>
+                    </property>
+                    <property>
+                        <name>text</name>
+                        <string>Cutoff Radius:</string>
+                    </property>
+                </widget>
+                <widget row="0"  column="1" >
+                    <class>QLineEdit</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>cutOffRadiusLineEdit</cstring>
+                    </property>
+                </widget>
+            </grid>
+        </widget>
+        <widget>
+            <class>QCheckBox</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>useVertexShadersCheckBox</cstring>
+            </property>
+            <property>
+                <name>geometry</name>
+                <rect>
+                    <x>170</x>
+                    <y>50</y>
+                    <width>150</width>
+                    <height>17</height>
+                </rect>
+            </property>
+            <property>
+                <name>text</name>
+                <string>Use Vertex Shaders</string>
+            </property>
+        </widget>
+        <widget>
+            <class>QCheckBox</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>useDisplayListsCheckBox</cstring>
+            </property>
+            <property>
+                <name>geometry</name>
+                <rect>
+                    <x>170</x>
+                    <y>25</y>
+                    <width>140</width>
+                    <height>17</height>
+                </rect>
+            </property>
+            <property>
+                <name>text</name>
+                <string>Use Display Lists</string>
+            </property>
+        </widget>
+    </widget>
+</widget>
+</UI>

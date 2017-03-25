@@ -1,0 +1,13 @@
+Pointshop3D Licensing
+
+Copyright (c) 2001 - 2004 Computer Graphics Lab, ETH Zurich
+
+Pointshop3D is free software. As such, you are free to run, copy, distribute, study, change and improve it for non-commercial purposes. Inclusion of rendered images or video in a publication (printed or electronic) is also permitted. IN THIS CASE, CREDIT MUST BE GIVEN TO THE COMPUTER GRAPHICS LAB, ETH ZURICH.
+
+Various free software licenses are used in Pointshop3D. Each source file in this distribution contains a header declaring under which license it is published and who is copyright holder. 
+
+Most components of Pointshop3D are licensed under the GNU General Public License and the GNU Lesser General Public License, which are also provided with this distribution (gpl.txt, lgpl.txt). However, other licenses may apply. If you redistribute the software, be careful to respect the terms and conditions of the individual licenses.
+
+This program is distributed WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL THE COPYRIGHT HOLDERS BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF THE COPYRIGHT HOLDERS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+THE COPYRIGHT HOLDERS SPECIFICALLY DISCLAIM ANY WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE PROVIDED HEREUNDER IS ON AN "AS IS" BASIS, AND THE COPYRIGHT HOLDERS DO NOT HAVE ANY OBLIGATIONS TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.

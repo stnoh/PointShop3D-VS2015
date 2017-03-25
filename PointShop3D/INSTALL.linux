@@ -1,0 +1,46 @@
+REQUIREMENTS
+------------
+
+- QT 3.x
+
+- gcc 3.x
+
+- Download and install the GNU Scientific Library (GSL 1.3 or higher).
+  Set the GSLDIR environment variable to the GSL directory.
+
+
+COMPILATION
+-----------
+
+To compile Pointshop3D under Linux:
+
+- Optionally edit buildcfg.pro to choose between debug or release mode.
+
+- Run "qmake PointShop.pro".
+
+- Run "make".
+
+
+RUN POINTSHOP
+------------- 
+
+To run Pointshop3D under Linux:
+
+- Change into the directory where the binary is located:
+  $> cd bin/linux/release
+
+- Include "." in your library path:
+  $> export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
+  
+
+- Execute PointShop
+  $> ./PointShop
+
+
+KNOWN PROBLEMS
+--------------
+
+Some people using NVidia graphics cards experienced errors while
+compiling the OpenGLRenderer. These can occur due to an an incomplete
+installation of the NVidia driver. To fix that copy all files in
+/usr/share/doc/NVIDIA_GLX-1.0/include/GL/ to /usr/include/GL/.

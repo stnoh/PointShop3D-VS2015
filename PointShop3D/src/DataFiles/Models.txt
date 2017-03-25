@@ -1,0 +1,2 @@
+"Build" this project as to install the models. Note that if you add more models to the
+"Models" directory you have to force a rebuild of this project as to install them as well.

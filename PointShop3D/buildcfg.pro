@@ -1,0 +1,2 @@
+BUILDTYPE = release
+# BUILDTYPE = debug

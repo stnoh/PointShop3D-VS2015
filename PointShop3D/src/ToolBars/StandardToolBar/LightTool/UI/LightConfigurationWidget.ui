@@ -1,0 +1,57 @@
+<!DOCTYPE UI><UI>
+<class>LightConfigurationWidget</class>
+<widget>
+    <class>QWidget</class>
+    <property stdset="1">
+        <name>name</name>
+        <cstring>LightConfigurationWidget</cstring>
+    </property>
+    <property>
+        <name>geometry</name>
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>240</width>
+            <height>120</height>
+        </rect>
+    </property>
+    <property>
+        <name>minimumSize</name>
+        <size>
+            <width>240</width>
+            <height>120</height>
+        </size>
+    </property>
+    <property>
+        <name>maximumSize</name>
+        <size>
+            <width>240</width>
+            <height>120</height>
+        </size>
+    </property>
+    <property>
+        <name>caption</name>
+        <string>Navigation Tool Settings</string>
+    </property>
+    <widget>
+        <class>QCheckBox</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>previewRendererCheckBox</cstring>
+        </property>
+        <property>
+            <name>geometry</name>
+            <rect>
+                <x>10</x>
+                <y>5</y>
+                <width>140</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property>
+            <name>text</name>
+            <string>Use Preview Renderer</string>
+        </property>
+    </widget>
+</widget>
+</UI>

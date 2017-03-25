@@ -1,0 +1,1156 @@
+<!DOCTYPE UI><UI>
+<class>AnimationDialogBase</class>
+<widget>
+    <class>QDialog</class>
+    <property stdset="1">
+        <name>name</name>
+        <cstring>AnimationDialogBase</cstring>
+    </property>
+    <property stdset="1">
+        <name>geometry</name>
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>496</width>
+            <height>600</height>
+        </rect>
+    </property>
+    <property stdset="1">
+        <name>sizePolicy</name>
+        <sizepolicy>
+            <hsizetype>0</hsizetype>
+            <vsizetype>0</vsizetype>
+        </sizepolicy>
+    </property>
+    <property stdset="1">
+        <name>minimumSize</name>
+        <size>
+            <width>330</width>
+            <height>37</height>
+        </size>
+    </property>
+    <property stdset="1">
+        <name>maximumSize</name>
+        <size>
+            <width>500</width>
+            <height>600</height>
+        </size>
+    </property>
+    <property stdset="1">
+        <name>caption</name>
+        <string>Animation</string>
+    </property>
+    <property stdset="1">
+        <name>sizeGripEnabled</name>
+        <bool>false</bool>
+    </property>
+    <widget>
+        <class>QGroupBox</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>GroupBox37</cstring>
+        </property>
+        <property stdset="1">
+            <name>enabled</name>
+            <bool>true</bool>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>205</width>
+                <height>50</height>
+            </rect>
+        </property>
+        <property stdset="1">
+            <name>minimumSize</name>
+            <size>
+                <width>0</width>
+                <height>0</height>
+            </size>
+        </property>
+        <property stdset="1">
+            <name>title</name>
+            <string>Dimension</string>
+        </property>
+        <widget>
+            <class>QLineEdit</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>heightLineEdit</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>150</x>
+                    <y>20</y>
+                    <width>45</width>
+                    <height>22</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string></string>
+            </property>
+        </widget>
+        <widget>
+            <class>QLabel</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>TextLabel9</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>110</x>
+                    <y>20</y>
+                    <width>35</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Height</string>
+            </property>
+        </widget>
+        <widget>
+            <class>QLineEdit</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>widthLineEdit</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>50</x>
+                    <y>20</y>
+                    <width>45</width>
+                    <height>22</height>
+                </rect>
+            </property>
+        </widget>
+        <widget>
+            <class>QLabel</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>TextLabel8</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>15</x>
+                    <y>20</y>
+                    <width>30</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Width</string>
+            </property>
+        </widget>
+    </widget>
+    <widget>
+        <class>QButtonGroup</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>ButtonGroup1</cstring>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>215</x>
+                <y>0</y>
+                <width>110</width>
+                <height>135</height>
+            </rect>
+        </property>
+        <property stdset="1">
+            <name>title</name>
+            <string>Rotation</string>
+        </property>
+        <property stdset="1">
+            <name>exclusive</name>
+            <bool>false</bool>
+        </property>
+        <widget>
+            <class>QLineEdit</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>degreesLineEdit</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>55</x>
+                    <y>20</y>
+                    <width>45</width>
+                    <height>22</height>
+                </rect>
+            </property>
+        </widget>
+        <widget>
+            <class>QLabel</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>TextLabel1</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>10</x>
+                    <y>20</y>
+                    <width>40</width>
+                    <height>22</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Degrees</string>
+            </property>
+        </widget>
+        <widget>
+            <class>QRadioButton</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>xAxisRadioButton</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>10</x>
+                    <y>45</y>
+                    <width>59</width>
+                    <height>22</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>X-Axis</string>
+            </property>
+            <property stdset="1">
+                <name>buttonGroupId</name>
+                <number>1</number>
+            </property>
+            <property>
+                <name>toolTip</name>
+                <string>Rotate around X-axis</string>
+            </property>
+            <property>
+                <name>whatsThis</name>
+                <string>Rotate around X-axis</string>
+            </property>
+        </widget>
+        <widget>
+            <class>QRadioButton</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>yAxisRadioButton</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>10</x>
+                    <y>65</y>
+                    <width>59</width>
+                    <height>22</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Y-Axis</string>
+            </property>
+            <property stdset="1">
+                <name>buttonGroupId</name>
+                <number>2</number>
+            </property>
+            <property>
+                <name>toolTip</name>
+                <string>Rotate aroundY-axis</string>
+            </property>
+            <property>
+                <name>whatsThis</name>
+                <string>Rotate around Y-axis</string>
+            </property>
+        </widget>
+        <widget>
+            <class>QRadioButton</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>zAxisRadioButton</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>10</x>
+                    <y>85</y>
+                    <width>60</width>
+                    <height>22</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Z-Axis</string>
+            </property>
+            <property stdset="1">
+                <name>buttonGroupId</name>
+                <number>3</number>
+            </property>
+            <property>
+                <name>toolTip</name>
+                <string>Rotate around Z-axis</string>
+            </property>
+            <property>
+                <name>whatsThis</name>
+                <string>Rotate around Z-axis</string>
+            </property>
+        </widget>
+        <widget>
+            <class>QCheckBox</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>continuousCheckBox</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>10</x>
+                    <y>110</y>
+                    <width>90</width>
+                    <height>16</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Continuous</string>
+            </property>
+            <property>
+                <name>toolTip</name>
+                <string>Smooth 360 degrees rotations</string>
+            </property>
+            <property>
+                <name>whatsThis</name>
+                <string>Check this box if you want to concatenate multiple 360 degrees rotations as to get a continuous transition</string>
+            </property>
+        </widget>
+    </widget>
+    <widget>
+        <class>QGroupBox</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>GroupBox4</cstring>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>0</x>
+                <y>55</y>
+                <width>205</width>
+                <height>80</height>
+            </rect>
+        </property>
+        <property stdset="1">
+            <name>title</name>
+            <string>Duration</string>
+        </property>
+        <widget>
+            <class>QLabel</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>TextLabel4</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>10</x>
+                    <y>20</y>
+                    <width>70</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Duration [sec]</string>
+            </property>
+        </widget>
+        <widget>
+            <class>QLineEdit</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>durationLineEdit</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>150</x>
+                    <y>20</y>
+                    <width>45</width>
+                    <height>22</height>
+                </rect>
+            </property>
+        </widget>
+        <widget>
+            <class>QComboBox</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>fpsComboBox</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>145</x>
+                    <y>50</y>
+                    <width>55</width>
+                    <height>22</height>
+                </rect>
+            </property>
+        </widget>
+        <widget>
+            <class>QLabel</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>TextLabel5</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>10</x>
+                    <y>50</y>
+                    <width>110</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Frames Per Second</string>
+            </property>
+        </widget>
+    </widget>
+    <widget>
+        <class>QGroupBox</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>storageGroupBox</cstring>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>0</x>
+                <y>140</y>
+                <width>205</width>
+                <height>140</height>
+            </rect>
+        </property>
+        <property stdset="1">
+            <name>title</name>
+            <string>Storage</string>
+        </property>
+        <widget>
+            <class>QLabel</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>TextLabel7</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>10</x>
+                    <y>50</y>
+                    <width>65</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Directory</string>
+            </property>
+        </widget>
+        <widget>
+            <class>QLabel</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>TextLabel6</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>10</x>
+                    <y>20</y>
+                    <width>60</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>File Name</string>
+            </property>
+        </widget>
+        <widget>
+            <class>QLineEdit</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>directoryLineEdit</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>75</x>
+                    <y>50</y>
+                    <width>120</width>
+                    <height>22</height>
+                </rect>
+            </property>
+        </widget>
+        <widget>
+            <class>QLineEdit</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>baseFileNameLineEdit</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>75</x>
+                    <y>20</y>
+                    <width>120</width>
+                    <height>22</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>minimumSize</name>
+                <size>
+                    <width>120</width>
+                    <height>0</height>
+                </size>
+            </property>
+        </widget>
+        <widget>
+            <class>QCheckBox</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>storeAnimationCheckBox</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>100</x>
+                    <y>75</y>
+                    <width>100</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Store Animation</string>
+            </property>
+            <property>
+                <name>whatsThis</name>
+                <string>Check this box as to store the animation</string>
+            </property>
+        </widget>
+        <widget>
+            <class>QComboBox</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>fileFormatComboBox</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>75</x>
+                    <y>100</y>
+                    <width>125</width>
+                    <height>22</height>
+                </rect>
+            </property>
+        </widget>
+        <widget>
+            <class>QLabel</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>TextLabel10</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>10</x>
+                    <y>100</y>
+                    <width>65</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>File Format</string>
+            </property>
+        </widget>
+        <widget>
+            <class>QPushButton</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>browsePushButton</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>10</x>
+                    <y>75</y>
+                    <width>65</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Browse...</string>
+            </property>
+            <property stdset="1">
+                <name>autoDefault</name>
+                <bool>false</bool>
+            </property>
+            <property stdset="1">
+                <name>flat</name>
+                <bool>false</bool>
+            </property>
+        </widget>
+    </widget>
+    <widget>
+        <class>QGroupBox</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>GroupBox3</cstring>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>215</x>
+                <y>140</y>
+                <width>110</width>
+                <height>80</height>
+            </rect>
+        </property>
+        <property stdset="1">
+            <name>title</name>
+            <string>Zoom</string>
+        </property>
+        <widget>
+            <class>QLabel</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>TextLabel2</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>10</x>
+                    <y>20</y>
+                    <width>40</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Start</string>
+            </property>
+        </widget>
+        <widget>
+            <class>QLabel</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>TextLabel3</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>10</x>
+                    <y>50</y>
+                    <width>30</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>End</string>
+            </property>
+        </widget>
+        <widget>
+            <class>QLineEdit</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>endPositionLineEdit</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>55</x>
+                    <y>50</y>
+                    <width>45</width>
+                    <height>22</height>
+                </rect>
+            </property>
+            <property>
+                <name>toolTip</name>
+                <string>End position on Z-Axis</string>
+            </property>
+            <property>
+                <name>whatsThis</name>
+                <string>End position on Z-Axis</string>
+            </property>
+        </widget>
+        <widget>
+            <class>QLineEdit</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>startPositionLineEdit</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>55</x>
+                    <y>20</y>
+                    <width>45</width>
+                    <height>22</height>
+                </rect>
+            </property>
+            <property>
+                <name>toolTip</name>
+                <string>Start position on Z-Axis</string>
+            </property>
+            <property>
+                <name>whatsThis</name>
+                <string>Start position on Z-Axis</string>
+            </property>
+        </widget>
+    </widget>
+    <widget>
+        <class>QCheckBox</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>updateDisplayCheckBox</cstring>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>215</x>
+                <y>225</y>
+                <width>105</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property stdset="1">
+            <name>text</name>
+            <string>Update Display</string>
+        </property>
+    </widget>
+    <widget>
+        <class>QLabel</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>TextLabel1_2</cstring>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>210</x>
+                <y>245</y>
+                <width>115</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property stdset="1">
+            <name>text</name>
+            <string>Don't use with OpenGL!</string>
+        </property>
+    </widget>
+    <widget>
+        <class>QPushButton</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>stopPushButton</cstring>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>225</x>
+                <y>315</y>
+                <width>100</width>
+                <height>26</height>
+            </rect>
+        </property>
+        <property stdset="1">
+            <name>text</name>
+            <string>&amp;Stop!</string>
+        </property>
+        <property stdset="1">
+            <name>autoDefault</name>
+            <bool>true</bool>
+        </property>
+        <property>
+            <name>whatsThis</name>
+            <string>Stop the animation</string>
+        </property>
+    </widget>
+    <widget>
+        <class>QLabel</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>formatTextLabel</cstring>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>5</x>
+                <y>290</y>
+                <width>210</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property stdset="1">
+            <name>text</name>
+            <string></string>
+        </property>
+    </widget>
+    <widget>
+        <class>QLabel</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>pathTextLabel</cstring>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>5</x>
+                <y>315</y>
+                <width>210</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property stdset="1">
+            <name>text</name>
+            <string></string>
+        </property>
+    </widget>
+    <widget>
+        <class>QProgressBar</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>animationProgressBar</cstring>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>5</x>
+                <y>340</y>
+                <width>210</width>
+                <height>21</height>
+            </rect>
+        </property>
+        <property stdset="1">
+            <name>minimumSize</name>
+            <size>
+                <width>210</width>
+                <height>0</height>
+            </size>
+        </property>
+    </widget>
+    <widget>
+        <class>QGroupBox</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>GroupBox5</cstring>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>335</x>
+                <y>0</y>
+                <width>110</width>
+                <height>130</height>
+            </rect>
+        </property>
+        <property stdset="1">
+            <name>title</name>
+            <string>Cutoff Radius</string>
+        </property>
+        <widget>
+            <class>QLabel</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>TextLabel2_2</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>10</x>
+                    <y>25</y>
+                    <width>40</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Start</string>
+            </property>
+        </widget>
+        <widget>
+            <class>QLabel</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>TextLabel3_2</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>10</x>
+                    <y>55</y>
+                    <width>30</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>End</string>
+            </property>
+        </widget>
+        <widget>
+            <class>QLineEdit</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>endCutOffLineEdit</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>55</x>
+                    <y>55</y>
+                    <width>45</width>
+                    <height>22</height>
+                </rect>
+            </property>
+            <property>
+                <name>toolTip</name>
+                <string>End position on Z-Axis</string>
+            </property>
+            <property>
+                <name>whatsThis</name>
+                <string>End position on Z-Axis</string>
+            </property>
+        </widget>
+        <widget>
+            <class>QLineEdit</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>startCutOffLineEdit</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>55</x>
+                    <y>25</y>
+                    <width>45</width>
+                    <height>22</height>
+                </rect>
+            </property>
+            <property>
+                <name>toolTip</name>
+                <string>Start position on Z-Axis</string>
+            </property>
+            <property>
+                <name>whatsThis</name>
+                <string>Start position on Z-Axis</string>
+            </property>
+        </widget>
+    </widget>
+    <widget>
+        <class>QPushButton</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>animatePushButton</cstring>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>225</x>
+                <y>285</y>
+                <width>100</width>
+                <height>26</height>
+            </rect>
+        </property>
+        <property stdset="1">
+            <name>text</name>
+            <string>&amp;Animate...</string>
+        </property>
+        <property stdset="1">
+            <name>autoDefault</name>
+            <bool>true</bool>
+        </property>
+        <property>
+            <name>whatsThis</name>
+            <string>Start the animation</string>
+        </property>
+    </widget>
+    <widget>
+        <class>QPushButton</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>resetPushButton</cstring>
+        </property>
+        <property stdset="1">
+            <name>enabled</name>
+            <bool>false</bool>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>225</x>
+                <y>345</y>
+                <width>100</width>
+                <height>26</height>
+            </rect>
+        </property>
+        <property stdset="1">
+            <name>text</name>
+            <string>Reset</string>
+        </property>
+        <property>
+            <name>whatsThis</name>
+            <string>Reset the model position to its home position</string>
+        </property>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>animatePushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>AnimationDialogBase</receiver>
+        <slot>clickedAnimate()</slot>
+    </connection>
+    <connection>
+        <sender>stopPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>AnimationDialogBase</receiver>
+        <slot>clickedStop()</slot>
+    </connection>
+    <connection>
+        <sender>degreesLineEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>AnimationDialogBase</receiver>
+        <slot>handleDegreesChanged()</slot>
+    </connection>
+    <connection>
+        <sender>baseFileNameLineEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>AnimationDialogBase</receiver>
+        <slot>handleBaseFileNameChanged()</slot>
+    </connection>
+    <connection>
+        <sender>durationLineEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>AnimationDialogBase</receiver>
+        <slot>handleDurationChanged()</slot>
+    </connection>
+    <connection>
+        <sender>fpsComboBox</sender>
+        <signal>activated(int)</signal>
+        <receiver>AnimationDialogBase</receiver>
+        <slot>handleFPSChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>resetPushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>AnimationDialogBase</receiver>
+        <slot>clickedReset()</slot>
+    </connection>
+    <connection>
+        <sender>endPositionLineEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>AnimationDialogBase</receiver>
+        <slot>handleEndPositionChanged()</slot>
+    </connection>
+    <connection>
+        <sender>startPositionLineEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>AnimationDialogBase</receiver>
+        <slot>handleStartPositionChanged()</slot>
+    </connection>
+    <connection>
+        <sender>browsePushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>AnimationDialogBase</receiver>
+        <slot>clickedBrowse()</slot>
+    </connection>
+    <connection>
+        <sender>widthLineEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>AnimationDialogBase</receiver>
+        <slot>handleWidthChanged()</slot>
+    </connection>
+    <connection>
+        <sender>heightLineEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>AnimationDialogBase</receiver>
+        <slot>handleHeightChanged()</slot>
+    </connection>
+    <connection>
+        <sender>storeAnimationCheckBox</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>AnimationDialogBase</receiver>
+        <slot>handleStoreAnimationChanged(bool)</slot>
+    </connection>
+    <connection>
+        <sender>directoryLineEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>AnimationDialogBase</receiver>
+        <slot>handleDirectoryChanged()</slot>
+    </connection>
+    <connection>
+        <sender>startCutOffLineEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>AnimationDialogBase</receiver>
+        <slot>handleStartCutOffChanged()</slot>
+    </connection>
+    <connection>
+        <sender>endCutOffLineEdit</sender>
+        <signal>returnPressed()</signal>
+        <receiver>AnimationDialogBase</receiver>
+        <slot>handleEndCutOffChanged()</slot>
+    </connection>
+    <slot access="public">clickedAnimate()</slot>
+    <slot access="public">clickedBrowse()</slot>
+    <slot access="public">clickedReset()</slot>
+    <slot access="public">clickedStop()</slot>
+    <slot access="public">handleBaseFileNameChanged()</slot>
+    <slot access="public">handleDegreesChanged()</slot>
+    <slot access="public">handleDirectoryChanged()</slot>
+    <slot access="public">handleDurationChanged()</slot>
+    <slot access="public">handleEndPositionChanged()</slot>
+    <slot access="public">handleFPSChanged(int)</slot>
+    <slot access="public">handleHeightChanged()</slot>
+    <slot access="public">handleStartCutOffChanged()</slot>
+    <slot access="public">handleStartPositionChanged()</slot>
+    <slot access="public">handleStoreAnimationChanged(bool)</slot>
+    <slot access="public">handleWidthChanged()</slot>
+    <slot access="public">handleEndCutOffChanged()</slot>
+</connections>
+<tabstops>
+    <tabstop>degreesLineEdit</tabstop>
+    <tabstop>xAxisRadioButton</tabstop>
+    <tabstop>yAxisRadioButton</tabstop>
+    <tabstop>zAxisRadioButton</tabstop>
+    <tabstop>continuousCheckBox</tabstop>
+    <tabstop>startPositionLineEdit</tabstop>
+    <tabstop>endPositionLineEdit</tabstop>
+    <tabstop>durationLineEdit</tabstop>
+    <tabstop>fpsComboBox</tabstop>
+    <tabstop>widthLineEdit</tabstop>
+    <tabstop>heightLineEdit</tabstop>
+    <tabstop>baseFileNameLineEdit</tabstop>
+    <tabstop>directoryLineEdit</tabstop>
+    <tabstop>browsePushButton</tabstop>
+    <tabstop>fileFormatComboBox</tabstop>
+    <tabstop>storeAnimationCheckBox</tabstop>
+    <tabstop>animatePushButton</tabstop>
+    <tabstop>stopPushButton</tabstop>
+    <tabstop>resetPushButton</tabstop>
+</tabstops>
+</UI>

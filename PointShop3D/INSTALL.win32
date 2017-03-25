@@ -1,0 +1,53 @@
+REQUIREMENTS
+------------
+
+For Microsoft Visual Studio 6.0, Qt 2.3 or higher is required.
+For Windows with Microsoft Visual Studio 7.1 you need to install Qt 3.x.
+
+Download and install the GNU Scientific Library (GSL) for Microsoft Visual Studio (http://service-spi.web.cern.ch/service-spi/external/GSL/1.4/win32_vc6/lib/). 
+
+ENVIRONMENT VARIABLES
+---------------------
+For setting the environment variables choose: Control Panel - System - Advanced - Environment Variables - New
+The following environment variables have to be set:
+QTDIR (e.g. QTDIR = C:\Qt)
+QTLIB (e.g. QTLIB = qt-mt230nc.lib)
+QTDLL (e.g. QTDLL = qt-mt230nc.dll)
+GSLDIR (e.g. GSLDIR = "C:\GSL")
+
+
+COMPILATION
+-----------
+
+$POINTSHOP denotes the top-level directory where the source and project
+files are located.
+
+To compile Pointshop3D under win32 and Microsoft Visual Studio 6.0 follow the following steps:
+
+- open the MSVC 6.0 workspace file by double-clicking on it:
+  $POINTSHOP/PointShop.dsw
+- go to "Batch Build..." and build everything
+
+To compile Pointshop3D under win32 and Microsoft Visual Studio 7.1 follow the following steps:
+
+- open the MSVC 7.1 solution file by double-clicking on it:
+  $POINTSHOP/PointShop.sln
+- go to Build - Build Solution
+
+DOCUMENTATION
+-------------
+
+The documentation has been compiled with doxygen (http://www.doxygen.org)
+
+RUN POINTSHOP
+------------- 
+
+To run Pointshop3D under win32:
+
+- double-click on the executable:
+  $POINTSHOP/bin/win32/Debug/PointShop.exe
+    or
+  $POINTSHOP/bin/win32/Release/PointShop.exe
+  
+- Choose Edit - Settings... and set the Model directory to your model folder. 
+  Press the Apply button and click on the Settings tab onto the Save Default Settings Button.

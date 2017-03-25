@@ -1,0 +1,13 @@
+PROBLEMS
+--------
+
+1) The OpenGl-Renderer is very slow
+   --------------------------------
+* Try first to install the newest drivers for your graphics card.
+* Deactivate "Use Vertex Shaders" (in menu Edit - Settings... - Preview Renderer),
+  and if necessary activate "Constant Point Size"
+  
+2) When loading the bitmaps, Pointshop3D crashes
+   ---------------------------------------------
+* Check the Bitmaps folder for files which do not have the png-format
+* Delete all bitmaps which are not needed

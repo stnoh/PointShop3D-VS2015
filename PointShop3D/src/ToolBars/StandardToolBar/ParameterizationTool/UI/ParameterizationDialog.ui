@@ -1,0 +1,862 @@
+<!DOCTYPE UI><UI>
+<class>ParameterizationDialogBase</class>
+<widget>
+    <class>QDialog</class>
+    <property stdset="1">
+        <name>name</name>
+        <cstring>ParameterizationDialogBase</cstring>
+    </property>
+    <property stdset="1">
+        <name>geometry</name>
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>290</width>
+            <height>398</height>
+        </rect>
+    </property>
+    <property stdset="1">
+        <name>sizePolicy</name>
+        <sizepolicy>
+            <hsizetype>0</hsizetype>
+            <vsizetype>0</vsizetype>
+        </sizepolicy>
+    </property>
+    <property stdset="1">
+        <name>minimumSize</name>
+        <size>
+            <width>290</width>
+            <height>320</height>
+        </size>
+    </property>
+    <property stdset="1">
+        <name>maximumSize</name>
+        <size>
+            <width>290</width>
+            <height>500</height>
+        </size>
+    </property>
+    <property stdset="1">
+        <name>caption</name>
+        <string>Bitmap Marker</string>
+    </property>
+    <property stdset="1">
+        <name>sizeGripEnabled</name>
+        <bool>false</bool>
+    </property>
+    <widget>
+        <class>QButtonGroup</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>ButtonGroup1</cstring>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>140</width>
+                <height>55</height>
+            </rect>
+        </property>
+        <property stdset="1">
+            <name>title</name>
+            <string></string>
+        </property>
+        <widget>
+            <class>QPushButton</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>removeAll3DButton</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>80</x>
+                    <y>30</y>
+                    <width>55</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Clear All</string>
+            </property>
+            <property stdset="1">
+                <name>autoDefault</name>
+                <bool>false</bool>
+            </property>
+        </widget>
+        <widget>
+            <class>QPushButton</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>removeSelected3DButton</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>5</x>
+                    <y>30</y>
+                    <width>70</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Clear Active</string>
+            </property>
+            <property stdset="1">
+                <name>accel</name>
+                <number>0</number>
+            </property>
+            <property stdset="1">
+                <name>autoDefault</name>
+                <bool>false</bool>
+            </property>
+        </widget>
+        <widget>
+            <class>QLayoutWidget</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>Layout18</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>10</x>
+                    <y>10</y>
+                    <width>93</width>
+                    <height>15</height>
+                </rect>
+            </property>
+            <grid>
+                <property stdset="1">
+                    <name>margin</name>
+                    <number>0</number>
+                </property>
+                <property stdset="1">
+                    <name>spacing</name>
+                    <number>6</number>
+                </property>
+                <widget row="0"  column="0" >
+                    <class>QLabel</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>TextLabel2</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>3D Markers</string>
+                    </property>
+                </widget>
+                <widget row="0"  column="1" >
+                    <class>QLabel</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>fittingConstraint3DTextLabel</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>minimumSize</name>
+                        <size>
+                            <width>30</width>
+                            <height>0</height>
+                        </size>
+                    </property>
+                </widget>
+            </grid>
+        </widget>
+    </widget>
+    <widget>
+        <class>QButtonGroup</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>ButtonGroup1_2</cstring>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>145</x>
+                <y>0</y>
+                <width>140</width>
+                <height>55</height>
+            </rect>
+        </property>
+        <property stdset="1">
+            <name>title</name>
+            <string></string>
+        </property>
+        <widget>
+            <class>QLayoutWidget</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>Layout19</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>10</x>
+                    <y>10</y>
+                    <width>93</width>
+                    <height>15</height>
+                </rect>
+            </property>
+            <grid>
+                <property stdset="1">
+                    <name>margin</name>
+                    <number>0</number>
+                </property>
+                <property stdset="1">
+                    <name>spacing</name>
+                    <number>6</number>
+                </property>
+                <widget row="0"  column="0" >
+                    <class>QLabel</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>TextLabel1_3</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>text</name>
+                        <string>2D Markers</string>
+                    </property>
+                </widget>
+                <widget row="0"  column="1" >
+                    <class>QLabel</class>
+                    <property stdset="1">
+                        <name>name</name>
+                        <cstring>fittingConstraint2DTextLabel</cstring>
+                    </property>
+                    <property stdset="1">
+                        <name>minimumSize</name>
+                        <size>
+                            <width>30</width>
+                            <height>0</height>
+                        </size>
+                    </property>
+                </widget>
+            </grid>
+        </widget>
+        <widget>
+            <class>QPushButton</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>removeSelected2DButton</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>5</x>
+                    <y>30</y>
+                    <width>70</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Clear Active</string>
+            </property>
+            <property stdset="1">
+                <name>accel</name>
+                <number>0</number>
+            </property>
+            <property stdset="1">
+                <name>autoDefault</name>
+                <bool>false</bool>
+            </property>
+        </widget>
+        <widget>
+            <class>QPushButton</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>removeAll2DButton</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>80</x>
+                    <y>30</y>
+                    <width>55</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Clear All</string>
+            </property>
+            <property stdset="1">
+                <name>autoDefault</name>
+                <bool>false</bool>
+            </property>
+        </widget>
+    </widget>
+    <widget>
+        <class>QPushButton</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>extensionButton</cstring>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>205</x>
+                <y>370</y>
+                <width>80</width>
+                <height>25</height>
+            </rect>
+        </property>
+        <property stdset="1">
+            <name>text</name>
+            <string>&amp;Advanced...</string>
+        </property>
+        <property stdset="1">
+            <name>toggleButton</name>
+            <bool>true</bool>
+        </property>
+        <property stdset="1">
+            <name>autoDefault</name>
+            <bool>true</bool>
+        </property>
+        <property stdset="1">
+            <name>toggleButton</name>
+            <bool>true</bool>
+        </property>
+    </widget>
+    <widget>
+        <class>QPushButton</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>generateUVButton</cstring>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>105</x>
+                <y>370</y>
+                <width>80</width>
+                <height>25</height>
+            </rect>
+        </property>
+        <property stdset="1">
+            <name>text</name>
+            <string>&amp;Generate UV</string>
+        </property>
+        <property stdset="1">
+            <name>autoDefault</name>
+            <bool>true</bool>
+        </property>
+    </widget>
+    <widget>
+        <class>QButtonGroup</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>bitmapButtonGroup</cstring>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>0</x>
+                <y>60</y>
+                <width>285</width>
+                <height>230</height>
+            </rect>
+        </property>
+        <property stdset="1">
+            <name>title</name>
+            <string></string>
+        </property>
+        <widget>
+            <class>QLabel</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>TextLabel1_2</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>11</x>
+                    <y>11</y>
+                    <width>45</width>
+                    <height>22</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Property:</string>
+            </property>
+        </widget>
+        <widget>
+            <class>QLineEdit</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>sculptScaleLineEdit</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>210</x>
+                    <y>200</y>
+                    <width>60</width>
+                    <height>22</height>
+                </rect>
+            </property>
+        </widget>
+        <widget>
+            <class>QComboBox</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>propertyComboBox</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>58</x>
+                    <y>11</y>
+                    <width>135</width>
+                    <height>22</height>
+                </rect>
+            </property>
+        </widget>
+        <widget>
+            <class>QCheckBox</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>showAlphaCheckBox</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>205</x>
+                    <y>10</y>
+                    <width>55</width>
+                    <height>17</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Alpha</string>
+            </property>
+        </widget>
+        <widget>
+            <class>QPushButton</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>markPropertyBitmapButton</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>200</x>
+                    <y>35</y>
+                    <width>80</width>
+                    <height>25</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>&amp;Set Markers</string>
+            </property>
+        </widget>
+        <widget>
+            <class>QLabel</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>TextLabel1</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>210</x>
+                    <y>180</y>
+                    <width>70</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Sculpt Scale:</string>
+            </property>
+        </widget>
+        <widget>
+            <class>QButtonGroup</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>ButtonGroup5</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>200</x>
+                    <y>70</y>
+                    <width>80</width>
+                    <height>100</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>title</name>
+                <string>Sampling</string>
+            </property>
+            <widget>
+                <class>QRadioButton</class>
+                <property stdset="1">
+                    <name>name</name>
+                    <cstring>samplingSurfaceRadioButton</cstring>
+                </property>
+                <property stdset="1">
+                    <name>geometry</name>
+                    <rect>
+                        <x>12</x>
+                        <y>16</y>
+                        <width>60</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property stdset="1">
+                    <name>text</name>
+                    <string>Surface</string>
+                </property>
+                <property stdset="1">
+                    <name>checked</name>
+                    <bool>true</bool>
+                </property>
+            </widget>
+            <widget>
+                <class>QCheckBox</class>
+                <property stdset="1">
+                    <name>name</name>
+                    <cstring>surfaceFilterCheckBox</cstring>
+                </property>
+                <property stdset="1">
+                    <name>geometry</name>
+                    <rect>
+                        <x>25</x>
+                        <y>35</y>
+                        <width>50</width>
+                        <height>25</height>
+                    </rect>
+                </property>
+                <property stdset="1">
+                    <name>text</name>
+                    <string>Filter</string>
+                </property>
+            </widget>
+            <widget>
+                <class>QRadioButton</class>
+                <property stdset="1">
+                    <name>name</name>
+                    <cstring>samplingBitmapRadioButton</cstring>
+                </property>
+                <property stdset="1">
+                    <name>geometry</name>
+                    <rect>
+                        <x>12</x>
+                        <y>75</y>
+                        <width>55</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property stdset="1">
+                    <name>text</name>
+                    <string>Bitmap</string>
+                </property>
+            </widget>
+        </widget>
+        <widget>
+            <class>QLabel</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>propertyPixmapLabel</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>20</x>
+                    <y>55</y>
+                    <width>155</width>
+                    <height>155</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>minimumSize</name>
+                <size>
+                    <width>125</width>
+                    <height>125</height>
+                </size>
+            </property>
+            <property stdset="1">
+                <name>mouseTracking</name>
+                <bool>false</bool>
+            </property>
+            <property stdset="1">
+                <name>scaledContents</name>
+                <bool>true</bool>
+            </property>
+        </widget>
+    </widget>
+    <widget>
+        <class>QButtonGroup</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>ButtonGroup5_2</cstring>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>0</x>
+                <y>295</y>
+                <width>285</width>
+                <height>70</height>
+            </rect>
+        </property>
+        <property stdset="1">
+            <name>title</name>
+            <string>Parameterization</string>
+        </property>
+        <widget>
+            <class>QButtonGroup</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>ButtonGroup6</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>135</x>
+                    <y>35</y>
+                    <width>145</width>
+                    <height>31</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>lineWidth</name>
+                <number>0</number>
+            </property>
+            <property stdset="1">
+                <name>title</name>
+                <string></string>
+            </property>
+            <widget>
+                <class>QRadioButton</class>
+                <property stdset="1">
+                    <name>name</name>
+                    <cstring>XYRadioButton</cstring>
+                </property>
+                <property stdset="1">
+                    <name>geometry</name>
+                    <rect>
+                        <x>10</x>
+                        <y>5</y>
+                        <width>35</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property stdset="1">
+                    <name>text</name>
+                    <string>XY</string>
+                </property>
+                <property stdset="1">
+                    <name>checked</name>
+                    <bool>true</bool>
+                </property>
+            </widget>
+            <widget>
+                <class>QRadioButton</class>
+                <property stdset="1">
+                    <name>name</name>
+                    <cstring>YZRadioButton</cstring>
+                </property>
+                <property stdset="1">
+                    <name>geometry</name>
+                    <rect>
+                        <x>100</x>
+                        <y>4</y>
+                        <width>35</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property stdset="1">
+                    <name>text</name>
+                    <string>YZ</string>
+                </property>
+            </widget>
+            <widget>
+                <class>QRadioButton</class>
+                <property stdset="1">
+                    <name>name</name>
+                    <cstring>XZRadioButton</cstring>
+                </property>
+                <property stdset="1">
+                    <name>geometry</name>
+                    <rect>
+                        <x>55</x>
+                        <y>5</y>
+                        <width>35</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property stdset="1">
+                    <name>text</name>
+                    <string>XZ</string>
+                </property>
+            </widget>
+        </widget>
+        <widget>
+            <class>QRadioButton</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>orthProjectRadioButton</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>10</x>
+                    <y>40</y>
+                    <width>115</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Orthogal Projection</string>
+            </property>
+        </widget>
+        <widget>
+            <class>QRadioButton</class>
+            <property stdset="1">
+                <name>name</name>
+                <cstring>minDistortionRadioButton</cstring>
+            </property>
+            <property stdset="1">
+                <name>geometry</name>
+                <rect>
+                    <x>10</x>
+                    <y>20</y>
+                    <width>115</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property stdset="1">
+                <name>text</name>
+                <string>Minimize Distortion</string>
+            </property>
+            <property stdset="1">
+                <name>checked</name>
+                <bool>true</bool>
+            </property>
+        </widget>
+    </widget>
+    <widget>
+        <class>QPushButton</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>buttonHelp</cstring>
+        </property>
+        <property stdset="1">
+            <name>enabled</name>
+            <bool>false</bool>
+        </property>
+        <property stdset="1">
+            <name>geometry</name>
+            <rect>
+                <x>5</x>
+                <y>370</y>
+                <width>80</width>
+                <height>25</height>
+            </rect>
+        </property>
+        <property stdset="1">
+            <name>text</name>
+            <string>&amp;Help</string>
+        </property>
+        <property stdset="1">
+            <name>autoDefault</name>
+            <bool>true</bool>
+        </property>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>removeAll3DButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ParameterizationDialogBase</receiver>
+        <slot>handleRemoveAll3D()</slot>
+    </connection>
+    <connection>
+        <sender>removeSelected2DButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ParameterizationDialogBase</receiver>
+        <slot>handleRemoveSelected2D()</slot>
+    </connection>
+    <connection>
+        <sender>removeAll2DButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ParameterizationDialogBase</receiver>
+        <slot>handleRemoveAll2D()</slot>
+    </connection>
+    <connection>
+        <sender>removeSelected3DButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ParameterizationDialogBase</receiver>
+        <slot>handleRemoveSelected3D()</slot>
+    </connection>
+    <connection>
+        <sender>generateUVButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ParameterizationDialogBase</receiver>
+        <slot>handleUVGeneration()</slot>
+    </connection>
+    <connection>
+        <sender>propertyComboBox</sender>
+        <signal>activated(const QString&amp;)</signal>
+        <receiver>ParameterizationDialogBase</receiver>
+        <slot>handlePropertyChosen(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>markPropertyBitmapButton</sender>
+        <signal>clicked()</signal>
+        <receiver>ParameterizationDialogBase</receiver>
+        <slot>handleMarkPropertyBitmap()</slot>
+    </connection>
+    <connection>
+        <sender>extensionButton</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>ParameterizationDialogBase</receiver>
+        <slot>handleExtensions(bool)</slot>
+    </connection>
+    <connection>
+        <sender>showAlphaCheckBox</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>ParameterizationDialogBase</receiver>
+        <slot>handleShowAlpha(bool)</slot>
+    </connection>
+    <connection>
+        <sender>minDistortionRadioButton</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>ParameterizationDialogBase</receiver>
+        <slot>handleParameterizationTypeChanged()</slot>
+    </connection>
+    <connection>
+        <sender>orthProjectRadioButton</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>ParameterizationDialogBase</receiver>
+        <slot>handleParameterizationTypeChanged()</slot>
+    </connection>
+    <slot access="public">handleClearSelection()</slot>
+    <slot access="public">handleClusterSizeChanged()</slot>
+    <slot access="public">handleCoverageThresholdChanged()</slot>
+    <slot access="public">handleExtensions(bool)</slot>
+    <slot access="public">handleMarkPropertyAlphaBitmap()</slot>
+    <slot access="public">handleMarkPropertyBitmap()</slot>
+    <slot access="public">handleNumberOfLevelsChanged()</slot>
+    <slot access="public">handlePrecisionChanged()</slot>
+    <slot access="public">handlePropertyChosen(const QString&amp;)</slot>
+    <slot access="public">handleRemoveAll2D()</slot>
+    <slot access="public">handleRemoveAll3D()</slot>
+    <slot access="public">handleRemoveSelected2D()</slot>
+    <slot access="public">handleRemoveSelected3D()</slot>
+    <slot access="public">handleSelectAll()</slot>
+    <slot access="public">handleShowAlpha(bool)</slot>
+    <slot access="public">handleUVGeneration()</slot>
+    <slot access="public">handleParameterizationTypeChanged()</slot>
+</connections>
+</UI>

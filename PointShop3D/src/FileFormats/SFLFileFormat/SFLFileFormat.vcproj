@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="SFLFileFormat"
+	SccProjectName=""
+	SccLocalPath="">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory=".\bin\win32\Release"
+			IntermediateDirectory=".\bin\win32\Release"
+			ConfigurationType="2"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="2"
+				InlineFunctionExpansion="1"
+				AdditionalIncludeDirectories="$(QTDIR)\include,include,..\..\Core\DataStructures\src\,..\..\Core\Interfaces\src"
+				PreprocessorDefinitions="FILEFORMATPLUGIN_EXPORTS;WIN32;NDEBUG;_WINDOWS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL"
+				StringPooling="TRUE"
+				RuntimeLibrary="2"
+				EnableFunctionLevelLinking="TRUE"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderFile=".\bin\win32\Release/SFLFileFormat.pch"
+				AssemblerListingLocation=".\bin\win32\Release/"
+				ObjectFile=".\bin\win32\Release/"
+				ProgramDataBaseFileName=".\bin\win32\Release/"
+				BrowseInformation="1"
+				WarningLevel="3"
+				SuppressStartupBanner="TRUE"
+				CompileAs="0"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="$(QTDIR)\lib\$(QTLIB) pi.lib sfl.lib"
+				OutputFile=".\bin\win32\Release/SFLFileFormat.dll"
+				LinkIncremental="1"
+				SuppressStartupBanner="TRUE"
+				AdditionalLibraryDirectories="lib-Win32-release\"
+				ProgramDatabaseFile=".\bin\win32\Release/SFLFileFormat.pdb"
+				ImportLibrary=".\bin\win32\Release/SFLFileFormat.lib"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="NDEBUG"
+				MkTypLibCompatible="TRUE"
+				SuppressStartupBanner="TRUE"
+				TargetEnvironment="1"
+				TypeLibraryName=".\bin\win32\Release/SFLFileFormat.tlb"
+				HeaderFileName=""/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				Description="--- Installing file format plugin SFLFileFormat ---"
+				CommandLine="IF NOT EXIST ..\..\..\bin mkdir ..\..\..\bin
+IF NOT EXIST ..\..\..\bin\win32 mkdir ..\..\..\bin\win32
+IF NOT EXIST ..\..\..\bin\win32\Release mkdir ..\..\..\bin\win32\Release
+IF NOT EXIST ..\..\..\bin\win32\Release\FileFormatPlugins mkdir ..\..\..\bin\win32\Release\FileFormatPlugins
+copy bin\win32\Release\SFLFileFormat.dll ..\..\..\bin\win32\Release\FileFormatPlugins
+xcopy /Y lib-Win32-release\*.dll ..\..\..\bin\win32\Release
+"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="2055"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory=".\bin\win32\Debug"
+			IntermediateDirectory=".\bin\win32\Debug"
+			ConfigurationType="2"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories="$(QTDIR)\include,include"
+				PreprocessorDefinitions="FILEFORMATPLUGIN_EXPORTS;WIN32;_DEBUG;_WINDOWS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="2"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderFile=".\bin\win32\Debug/SFLFileFormat.pch"
+				AssemblerListingLocation=".\bin\win32\Debug/"
+				ObjectFile=".\bin\win32\Debug/"
+				ProgramDataBaseFileName=".\bin\win32\Debug/"
+				BrowseInformation="1"
+				WarningLevel="3"
+				SuppressStartupBanner="TRUE"
+				DebugInformationFormat="4"
+				CompileAs="0"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="$(QTDIR)\lib\$(QTLIB) pi.lib sfl.lib"
+				OutputFile=".\bin\win32\Debug/SFLFileFormat.dll"
+				LinkIncremental="2"
+				SuppressStartupBanner="TRUE"
+				AdditionalLibraryDirectories="lib-Win32-debug\"
+				GenerateDebugInformation="TRUE"
+				ProgramDatabaseFile=".\bin\win32\Debug/SFLFileFormat.pdb"
+				ImportLibrary=".\bin\win32\Debug/SFLFileFormat.lib"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="_DEBUG"
+				MkTypLibCompatible="TRUE"
+				SuppressStartupBanner="TRUE"
+				TargetEnvironment="1"
+				TypeLibraryName=".\bin\win32\Debug/SFLFileFormat.tlb"
+				HeaderFileName=""/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				Description="--- Installing file format plugin SFLFileFormat ---"
+				CommandLine="IF NOT EXIST ..\..\..\bin mkdir ..\..\..\bin
+IF NOT EXIST ..\..\..\bin\win32 mkdir ..\..\..\bin\win32
+IF NOT EXIST ..\..\..\bin\win32\Debug mkdir ..\..\..\bin\win32\Debug
+IF NOT EXIST ..\..\..\bin\win32\Debug\FileFormatPlugins mkdir ..\..\..\bin\win32\Debug\FileFormatPlugins
+copy bin\win32\Debug\SFLFileFormat.dll ..\..\..\bin\win32\Debug\FileFormatPlugins
+xcopy /Y lib-Win32-debug\*.dll ..\..\..\bin\win32\Debug
+"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="2055"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
+			<File
+				RelativePath="src\SFLFileFormat.cpp">
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="FILEFORMATPLUGIN_EXPORTS;WIN32;NDEBUG;_WINDOWS;_MBCS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="FILEFORMATPLUGIN_EXPORTS;WIN32;_DEBUG;_WINDOWS;_MBCS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl">
+			<File
+				RelativePath="src\SFLFileFormat.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="User Interfaces (UI)"
+			Filter="*.ui">
+			<File
+				RelativePath="UI\SFLCustomizeDialog.ui">
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Uic&apos;ing $(InputName).ui ..."
+						CommandLine="%qtdir%\bin\uic.exe &quot;$(InputPath)&quot; -o &quot;$(InputDir)$(InputName).h&quot;
+%qtdir%\bin\uic.exe &quot;$(InputPath)&quot; -i &quot;$(InputName)&quot;.h -o &quot;$(InputDir)$(InputName)&quot;.cpp
+%qtdir%\bin\moc.exe &quot;$(InputDir)$(InputName).h&quot; -o &quot;$(InputDir)moc_$(InputName).cpp&quot;
+"
+						Outputs="&quot;$(InputDir)$(InputName).h&quot;;$(InputDir)$(InputName).cpp;&quot;$(InputDir)moc_$(InputName).cpp&quot;"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="Uic&apos;ing $(InputName).ui ..."
+						CommandLine="%qtdir%\bin\uic.exe &quot;$(InputPath)&quot; -o &quot;$(InputDir)$(InputName).h&quot;
+%qtdir%\bin\uic.exe &quot;$(InputPath)&quot; -i &quot;$(InputName)&quot;.h -o &quot;$(InputDir)$(InputName)&quot;.cpp
+%qtdir%\bin\moc.exe &quot;$(InputDir)$(InputName).h&quot; -o &quot;$(InputDir)moc_$(InputName).cpp&quot;
+"
+						Outputs="&quot;$(InputDir)$(InputName).h&quot;;$(InputDir)$(InputName).cpp;&quot;$(InputDir)moc_$(InputName).cpp&quot;"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Auto-Generated"
+			Filter="">
+			<File
+				RelativePath="UI\moc_SFLCustomizeDialog.cpp">
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="FILEFORMATPLUGIN_EXPORTS;WIN32;NDEBUG;_WINDOWS;_MBCS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="FILEFORMATPLUGIN_EXPORTS;WIN32;_DEBUG;_WINDOWS;_MBCS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="UI\SFLCustomizeDialog.cpp">
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="2"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="FILEFORMATPLUGIN_EXPORTS;WIN32;NDEBUG;_WINDOWS;_MBCS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL;$(NoInherit)"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions="FILEFORMATPLUGIN_EXPORTS;WIN32;_DEBUG;_WINDOWS;_MBCS;_USRDLL;QT_THREAD_SUPPORT;QT_DLL;$(NoInherit)"
+						BasicRuntimeChecks="3"
+						BrowseInformation="1"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="UI\SFLCustomizeDialog.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="SFL"
+			Filter="">
+			<Filter
+				Name="SFL Headers"
+				Filter="*.h">
+				<File
+					RelativePath="include\sfl\api.h">
+				</File>
+				<File
+					RelativePath="include\sfl.h">
+				</File>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="Linux Project Files"
+			Filter="*.pro">
+			<File
+				RelativePath="SFLFileFormat.pro">
+			</File>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe">
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

@@ -1,0 +1,115 @@
+<!DOCTYPE UI><UI>
+<class>ObjectViewer</class>
+<widget>
+    <class>QDialog</class>
+    <property stdset="1">
+        <name>name</name>
+        <cstring>ObjectViewer</cstring>
+    </property>
+    <property>
+        <name>geometry</name>
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>290</width>
+            <height>190</height>
+        </rect>
+    </property>
+    <property>
+        <name>minimumSize</name>
+        <size>
+            <width>290</width>
+            <height>190</height>
+        </size>
+    </property>
+    <property>
+        <name>maximumSize</name>
+        <size>
+            <width>290</width>
+            <height>190</height>
+        </size>
+    </property>
+    <property>
+        <name>caption</name>
+        <string>Object Viewer</string>
+    </property>
+    <widget>
+        <class>QListBox</class>
+        <item>
+            <property>
+                <name>text</name>
+                <string>New Item</string>
+            </property>
+        </item>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>objectsListBox</cstring>
+        </property>
+        <property>
+            <name>geometry</name>
+            <rect>
+                <x>5</x>
+                <y>5</y>
+                <width>200</width>
+                <height>120</height>
+            </rect>
+        </property>
+    </widget>
+    <widget>
+        <class>QPushButton</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>hideShowPushButton</cstring>
+        </property>
+        <property>
+            <name>geometry</name>
+            <rect>
+                <x>5</x>
+                <y>135</y>
+                <width>65</width>
+                <height>26</height>
+            </rect>
+        </property>
+        <property>
+            <name>text</name>
+            <string>Hide</string>
+        </property>
+    </widget>
+    <widget>
+        <class>QPushButton</class>
+        <property stdset="1">
+            <name>name</name>
+            <cstring>activatePushButton</cstring>
+        </property>
+        <property>
+            <name>geometry</name>
+            <rect>
+                <x>75</x>
+                <y>135</y>
+                <width>65</width>
+                <height>26</height>
+            </rect>
+        </property>
+        <property>
+            <name>text</name>
+            <string>Activate</string>
+        </property>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>hideShowPushButton</sender>
+        <signal>released()</signal>
+        <receiver>ObjectViewer</receiver>
+        <slot>hideShow()</slot>
+    </connection>
+    <connection>
+        <sender>activatePushButton</sender>
+        <signal>released()</signal>
+        <receiver>ObjectViewer</receiver>
+        <slot>activateDeactivate()</slot>
+    </connection>
+    <slot access="public">hideShow()</slot>
+    <slot access="public">activateDeactivate()</slot>
+</connections>
+</UI>

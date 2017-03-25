@@ -1,0 +1,2 @@
+"Build" this project as to install the brushes. Note that if you add more brushes to the
+"Brushes" directory you have to force a rebuild of this project as to install them as well.

@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# set environment variables
+source environment.sh
+
+# build top makefile
+tmake PointShop.pro -o Makefile
+
+# install the SFL libraries first
+mkdir bin
+mkdir bin/linux
+mkdir bin/linux/release
+cp -r src/FileFormats/SFLFileFormat/lib-Linux-release/libpi.so bin/linux/release
+cp -r src/FileFormats/SFLFileFormat/lib-Linux-release/libsfl.so bin/linux/release
+
+# compile and install everything
+make
+
+# copy the resources
+mkdir bin/linux/release/Resources
+find src -name *.png -exec cp \{\} bin/linux/release/Resources \;
+cp -r Bitmaps bin/linux/release
+cp -r Brushes bin/linux/release
+
+# create the start script
+echo \#!/bin/sh > bin/linux/release/startPointShop
+cat environment.sh >> bin/linux/release/startPointShop
+echo ./PointShop >> bin/linux/release/startPointShop
+chmod a+x bin/linux/release/startPointShop
