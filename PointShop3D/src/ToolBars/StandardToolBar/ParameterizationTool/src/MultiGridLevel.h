@@ -29,13 +29,13 @@
 #ifndef __MULTIGRIDLEVEL_H_
 #define __MULTIGRIDLEVEL_H_
 
-#include <qintdict.h>
+//#include <qintdict.h>
 
 #include <vector>
-#include "../../../../Core/DataStructures/src/SurfelCollection.h"
+//#include "../../../../Core/DataStructures/src/SurfelCollection.h"
 #include "../../../../Core/DataStructures/src/NeighbourHood.h"
 #include "../../../../DataTypes/src/Vector3D.h"
-#include "../../../../Core/MarkerManager/src/MarkerManager.h"
+//#include "../../../../Core/MarkerManager/src/MarkerManager.h"
 #include "SparseLeastSquares.h"
 
 /**

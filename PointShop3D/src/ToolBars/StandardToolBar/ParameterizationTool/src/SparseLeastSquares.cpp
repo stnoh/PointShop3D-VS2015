@@ -28,8 +28,8 @@
 
 #include "SparseLeastSquares.h"
 #include <stdio.h>
-#include <qdatetime.h>
-
+//#include <qdatetime.h>
+#include "../../../../Utilities/src/Common.h"
 
 
 SparseLeastSquares::SparseLeastSquares(int n) {
@@ -177,13 +177,13 @@ int SparseLeastSquares::solve(float *x, const unsigned int size, float epsilon) 
 	for(i=0; i<nUnknowns; i++) {
 		r[i] = g[i];
 	}
-
+/*
 	QTime timer;
 	timer.start();
 	qDebug("SparseLeastSquares::solve: start solving with %i unknowns", nUnknowns);
-
+//*/
 	float debug = innerProduct(nUnknowns, g, g);
-	qDebug("SparseLeastSquares::solve: initial error is %f", debug);
+//	qDebug("SparseLeastSquares::solve: initial error is %f", debug);
 
 	while( (debug = innerProduct(nUnknowns, g, g)) > threshold) {
 
@@ -207,7 +207,7 @@ int SparseLeastSquares::solve(float *x, const unsigned int size, float epsilon) 
 		its++;
 	}
 
-	qDebug("SparseLeastSquares::solve: reached residuum %f in %i iterations in %i milliseconds", debug, its, timer.elapsed());
+//	qDebug("SparseLeastSquares::solve: reached residuum %f in %i iterations in %i milliseconds", debug, its, timer.elapsed());
 
 	// write result 
 	for(i=0; i<nUnknowns; i++) {

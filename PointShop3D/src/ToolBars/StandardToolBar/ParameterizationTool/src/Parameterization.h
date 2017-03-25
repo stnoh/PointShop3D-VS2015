@@ -29,15 +29,17 @@
 #ifndef __PARAMETERIZATION_H_
 #define __PARAMETERIZATION_H_
 
-#include <qintdict.h>
+//#include <qintdict.h>
 
-#include "../../../../Core/DataStructures/src/SurfelCollection.h"
+//#include "../../../../Core/DataStructures/src/SurfelCollection.h"
 #include "../../../../Core/DataStructures/src/NeighbourHood.h"
 #include "../../../../Core/DataStructures/src/Cluster.h"
-#include "../../../../Core/MarkerManager/src/MarkerManager.h"
+//#include "../../../../Core/MarkerManager/src/MarkerManager.h"
 #include "MultiGridLevel.h"
 #include "SparseLeastSquares.h"
 #include <vector>
+
+#include <glm/glm.hpp>
 
 // TODO: just use the "textureAlpha" images for the ToolPatch, textures not needed (they only define the size
 //       of the ToolPatch, which is not efficient, and very obscure for the user)
@@ -49,9 +51,9 @@
  * @author Matthias Zwicker
  * @version 1.2
  */
-class Parameterization : public QObject {
+class Parameterization /*: public QObject */ {
 
-	Q_OBJECT
+//	Q_OBJECT
 
 public:
 
@@ -84,6 +86,15 @@ public:
 	bool isFilterBrushEnabled();
 	void setFilterBrushEnabled(const bool enable);
 
+	////////////////////////////////////////////////////////////
+	// additional data structure for parameterization-only
+	////////////////////////////////////////////////////////////
+	std::vector<glm::vec3> targetCloudPoints;
+	std::vector<glm::vec3> targetCloudNormals;
+	std::vector<glm::vec2> finalUV;
+	std::vector<glm::vec2> markers2D;
+	std::vector<int> markers3Dindex;
+
 private:
 	
 	uint			   nofLevels,						// number of multigrid levels
@@ -98,7 +109,7 @@ private:
 	MultiGridLevel     **multiGridLevels;
 	Vector3D           **positions,
 		               **normals;
-	SurfelInterface    **selectedSurfels;               // we store the pointers to the selected surfels,
+//	SurfelInterface    **selectedSurfels;               // we store the pointers to the selected surfels,
 	                                                    // so the generated uv coordinates can be easily
 	                                                    // assigned to them once the solution has been calculated
 	float              **uvCoordinates;                 // the resulting uv coordinates
@@ -120,11 +131,11 @@ private:
 	bool               filterBrush;
 
 	void initializeFittingConstraints();			    // get the fitting constraints from the markers and store constraints in above arrays
-	void assignTexture ();			                  	// assign texture colors to original surfels (keeps original surfels, just assigns colors)
+//	void assignTexture ();			                  	// assign texture colors to original surfels (keeps original surfels, just assigns colors)
 
-	void resampleAtTextureResolution();					// resample the surface at the resolution of the texture (removes original surfels)
+//	void resampleAtTextureResolution();					// resample the surface at the resolution of the texture (removes original surfels)
 	bool computeJacobian (int positionIndex, float J[4], Vector3D& X, Vector3D& Y);
-	bool computeJacobianUnstable (SurfelInterface* surfel, float J[4], Vector3D& X, Vector3D& Y);
+//	bool computeJacobianUnstable (SurfelInterface* surfel, float J[4], Vector3D& X, Vector3D& Y);
 	
 	//void clearMultiGridLevels();						// clears all data structures associated with multigrid levels
 	void initSolutionFromLowerLevel (const uint levelIndex);			// init uv solution vector from a lower multigrid level
@@ -135,12 +146,12 @@ private:
 
 	// releases all resources used by the multigrid data structure
 	void clearMultiGrid();
-
+	/*
 private slots:
 
 	// connected to SelectionTool: selectionChanged - release the data structure
 	void handleSelectionChanged (SurfelInterface::Flag selectionFlag);
-
+	//*/
 };
 
 

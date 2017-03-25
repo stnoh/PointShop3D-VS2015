@@ -26,10 +26,10 @@
 // licensing are not clear to you.
 //
 
-#include <qstringlist.h>
+//#include <qstringlist.h>
 #include <stdio.h>
 #include <time.h>
-
+/*
 #include "../../../../Core/Interfaces/src/FrameBufferInterface.h"
 #include "../../../../Core/Interfaces/src/SurfelInterface.h"
 #include "../../../../Core/Configuration/src/Configuration.h"
@@ -48,9 +48,10 @@
 #include "../../../../Utilities/src/ImageOps.h"
 #include "../../../../Utilities/src/Common.h"
 #include "../../../../Utilities/UserMessages/src/StatusBar.h"
+//*/
 #include "Parameterization.h"
-#include "SplatBuffer.h"
-
+#include "../../../../DataTypes/src/MyDataTypes.h" // for MyDataTypes::TextureCoordinate
+//#include "SplatBuffer.h"
 // #define PERFMEASURING
 
 #ifdef PERFMEASURING
@@ -118,7 +119,7 @@ Parameterization::Parameterization() {
 	multiGridLevels           = 0;
 	positions                 = 0;
 	normals                   = 0;
-	selectedSurfels           = 0;
+//	selectedSurfels           = 0;
 	uvCoordinates             = 0;                
 	neighbourHoods            = 0;
 	clusters                  = 0;
@@ -131,10 +132,12 @@ Parameterization::Parameterization() {
 	isMultiGridValid = false;
 
 	// get informed whenever the selection has changed
+/*
 	this->connect (CoreTools::getInstance()->getSelectionTool(), SIGNAL (selectionChanged (SurfelInterface::Flag)),
 		           this, SLOT (handleSelectionChanged (SurfelInterface::Flag)));
 
 INIT_PERFMEASURING("g:\\test.txt");
+//*/
 }
 
 Parameterization::~Parameterization() {
@@ -220,9 +223,9 @@ float Parameterization::getDisplacementScaling() const {
 
 void Parameterization::generateUVCoordinates(bool resampleAtTextureResolutionFlag) {
 
-	StatusBar *statusBar;
+//	StatusBar *statusBar;
 	uint i;
-	
+/*
 COMMENT_PERFMEASURING("Multigrid_levels",nofLevels);
 COMMENT_PERFMEASURING("Clustersize_levels",clusterSize);
 
@@ -234,19 +237,20 @@ COMMENT_PERFMEASURING("Clustersize_levels",clusterSize);
 	statusBar = StatusBar::getInstance();
 
 	statusBar->showMessage ("Initializing multi grid solver...", -1);
+//*/
 	this->initializeMultiGrid();
 
 	// add fitting constraints to all levels
 	this->initializeFittingConstraints();
 
-	statusBar->showMessage ("Adding fitting constraints...", -1);
+//	statusBar->showMessage ("Adding fitting constraints...", -1);
 
 	for (i = 0; i < nofLevels; i++) {
 		multiGridLevels[i]->addFittingConstraints (fittingConstraintsU[i], fittingConstraintsV[i], fittingConstraintIndices[i], nofFittingConstraints, fittingConstrWeights);
 	}
 
 	// solve levels, start at lowest level and propagate solution to higher levels
-	statusBar->showMessage ("Solving equations...", -1);
+//	statusBar->showMessage ("Solving equations...", -1);
 
 START_PERFMEASURING;
 	for (i = 0; i < nofLevels - 1; i++) {
@@ -259,24 +263,41 @@ START_PERFMEASURING;
 STOP_PERFMEASURING("Multigrid_solution");
 	
 	if (resampleAtTextureResolutionFlag == false) {
-		statusBar->showMessage ("Assigning texture to selection...", -1);
+//		statusBar->showMessage ("Assigning texture to selection...", -1);
 
-		this->assignTexture ();
+//		this->assignTexture ();
+		fprintf(stderr, "[TODO?] this->assignTexture ();\n");
+
+		////////////////////////////////////////////////////////////
+		// export data
+		////////////////////////////////////////////////////////////
+		uint nofPositions = levelSizes[nofLevels - 1];
+		finalUV.resize(nofPositions);
+
+		for (i = 0; i < nofPositions; i++) {
+			float u = uvCoordinates[nofLevels - 1][i];
+			float v = uvCoordinates[nofLevels - 1][i + nofPositions];
+			finalUV[i].x = u;
+			finalUV[i].y = v;
+		}
+
 		for (i = 0; i < nofLevels; i++) {
 			multiGridLevels[i]->removeFittingConstraints();
 		}
 	}
 	else {
 		// this also invalidates the multigrid levels since we deselect everything in the selection
-		statusBar->showMessage ("Resampling selection...", -1);
+//		statusBar->showMessage ("Resampling selection...", -1);
 
-		this->resampleAtTextureResolution();
+//		this->resampleAtTextureResolution();
+		fprintf(stderr, "[TODO] this->resampleAtTextureResolution();\n");
 	}
 
 	// we have to force the emission of the signal
 	// NOTE: if the surface is not resampled, do not emit the object modified signal. this signal indirectly
 	// causes the selection tool to emit a selection changed signal, which in turn invalidates the multigrid
 	// structure. however, we want to avoid this!
+	/*
 	if (resampleAtTextureResolutionFlag == true) {
 		Scene::getInstance()->emitObjectModifiedSignal (true);
 	}
@@ -286,7 +307,7 @@ STOP_PERFMEASURING("Multigrid_solution");
 	Scene::getInstance()->emitRenderFrameSignal ();
 
 	statusBar->showMessage ("Parameterization done.");
-
+	//*/
 }
 
 // ***************
@@ -294,11 +315,12 @@ STOP_PERFMEASURING("Multigrid_solution");
 // ***************
 
 void Parameterization::initializeFittingConstraints() {
-
+/*
 	const QList<Marker3D>   *markers3D;
 	const QList<Marker2D>   *markers2D;
 	Marker3D                *currentMarker3D;	
 	Marker2D                *currentMarker2D;
+//*/
 	uint                    nofSelectedSurfels,
 							index;
 	bool                    indexFound;
@@ -306,7 +328,7 @@ void Parameterization::initializeFittingConstraints() {
 		                    position;
 
 	uint                    i, l;
-	
+/*	
 	SurfelInterface         *surfel;
 	MarkerManager           *markerManager;
 
@@ -317,6 +339,8 @@ void Parameterization::initializeFittingConstraints() {
 	QListIterator<Marker3D> markers3DIterator (*markers3D);
 	QListIterator<Marker2D> markers2DIterator (*markers2D);
 	nofFittingConstraints = markerManager->getMinimumFittingConstraintListCount();
+//*/
+	nofFittingConstraints = glm::max(markers2D.size(), markers3Dindex.size());
 
 	// remove the old fittingConstraint coordinates and indices, if there are any
 	if (fittingConstraintsU[nofLevels -1] != 0) {
@@ -337,19 +361,26 @@ void Parameterization::initializeFittingConstraints() {
 	
 	nofSelectedSurfels = 0;
 	for (i = 0; i < nofFittingConstraints; i++) {
-
+/*
 		currentMarker3D = markers3DIterator.current();
 		currentMarker2D = markers2DIterator.current();
 
 		surfel = currentMarker3D->getSurfel();
-
-		if (surfel->isFlagOn (SurfelInterface::SELECTED1) == true ) {
+//*/
+//		if (surfel->isFlagOn (SurfelInterface::SELECTED1) == true ) {
+		{
 
 			// store all fitting constraints in an internal table
+			/*
 			fittingConstraintsU[nofLevels - 1][nofSelectedSurfels] = currentMarker2D->getNormalX();
 			fittingConstraintsV[nofLevels - 1][nofSelectedSurfels] = currentMarker2D->getNormalY();
 			surfelPosition = surfel->getPosition();
+			//*/
+			fittingConstraintsU[nofLevels - 1][nofSelectedSurfels] = markers2D[i].x;
+			fittingConstraintsV[nofLevels - 1][nofSelectedSurfels] = markers2D[i].y;;
+
 			// search the position in the 'positions' array, which yields the index
+/*
 			indexFound = false;
 			index      = 0;
 			while (indexFound == false) {
@@ -363,15 +394,16 @@ void Parameterization::initializeFittingConstraints() {
 				}
 
 			}
-
 			fittingConstraintIndices[nofLevels - 1][nofSelectedSurfels] = index;
+//*/
+			fittingConstraintIndices[nofLevels - 1][nofSelectedSurfels] = markers3Dindex[i];
 			nofSelectedSurfels++;
 
 		}
-
+/*
 		++markers3DIterator;
 		++markers2DIterator;
-
+//*/
 	}
 
 	// update the number of fitting constraints, just the constraints which denote
@@ -411,7 +443,7 @@ void Parameterization::initializeFittingConstraints() {
 	}
 	
 }
-
+/*
 void Parameterization::assignTexture () {
 
 	std::vector<SurfelInterface *> texturedSurfels;
@@ -643,7 +675,7 @@ void Parameterization::resampleAtTextureResolution() {
 	this->clearMultiGrid();
 
 }
-
+//*/
 bool Parameterization::computeJacobian (int positionIndex, float J[4], Vector3D& X, Vector3D& Y) {
 
 	NeighbourHood                  *neighbourHood = neighbourHoods[nofLevels - 1];
@@ -736,7 +768,7 @@ bool Parameterization::computeJacobian (int positionIndex, float J[4], Vector3D&
 
 	return true;
 }
-
+/*
 bool Parameterization::computeJacobianUnstable(SurfelInterface* surfel, float J[4], Vector3D& X, Vector3D& Y) {
 	
 	NeighbourHood *neighbourHood = neighbourHoods[nofLevels - 1];
@@ -836,7 +868,7 @@ bool Parameterization::computeJacobianUnstable(SurfelInterface* surfel, float J[
 	return true;
 
 }
-
+//*/
 void Parameterization::initSolutionFromLowerLevel (const uint levelIndex) {
 
 	uint                           parentIndex;
@@ -864,10 +896,10 @@ void Parameterization::initializeMultiGrid() {
 		                         baseLevel,
 		                         nofSelectedSurfels,
 					             nofClusters;
-
+/*
 	std::vector<SurfelInterface*> *selection;
 	SurfelInterface              *surfel;
-
+//*/
 	if (isMultiGridValid == true) {
 		return;
 	}
@@ -890,6 +922,7 @@ void Parameterization::initializeMultiGrid() {
 	// find out whether we are working with elliptical surfels. note that we cannot 
 	// find out from the selection, since the selection is a std::vector<SurfelInterface*> of surfels, 
 	// not a surfel collection. so we check the type of the surfels in the active object.
+	/*
 	Scene *scene = Scene::getInstance();
 	SurfelCollection *objectSurfels = scene->getActiveObject()->getSurfelCollection();
 
@@ -898,6 +931,8 @@ void Parameterization::initializeMultiGrid() {
 	} else {
 	    useEllipticalSurfels = false;
 	}
+	//*/
+	useEllipticalSurfels = false;
 
 	// *************************
 	// initialize the base level
@@ -909,16 +944,17 @@ void Parameterization::initializeMultiGrid() {
 	// the multiGridLevel, the neighbourHood and the uvCoordinates
 	// (the fitting constraints are allocated and initialized later on in this algorithm)
 	
-	selection = CoreTools::getInstance()->getSelectionTool()->getSelection();
+//	selection = CoreTools::getInstance()->getSelectionTool()->getSelection();
 
-	nofSelectedSurfels = selection->size();
+//	nofSelectedSurfels = selection->size();
+	nofSelectedSurfels = targetCloudPoints.size();
 	levelSizes[baseLevel] = nofSelectedSurfels;
 	
 	// positions and normals from selected surfels
 	positions[baseLevel] = new Vector3D[nofSelectedSurfels];
 	normals[baseLevel]   = new Vector3D[nofSelectedSurfels];
-	selectedSurfels      = new SurfelInterface*[nofSelectedSurfels];
-
+//	selectedSurfels      = new SurfelInterface*[nofSelectedSurfels];
+	/*
 	for (i = 0 ; i < selection->size(); i++) {
 		
 		surfel = selection->at(i);
@@ -927,6 +963,27 @@ void Parameterization::initializeMultiGrid() {
 		selectedSurfels[i]      = surfel;
 	
 	}
+	//*/
+
+	////////////////////////////////////////////////////////////
+	// convert data from std::vector<glm::vec3> to Vector3D*
+	////////////////////////////////////////////////////////////
+	for (i = 0; i < targetCloudPoints.size(); i++) {
+		float px = targetCloudPoints[i].x;
+		float py = targetCloudPoints[i].y;
+		float pz = targetCloudPoints[i].z;
+
+		float nx = targetCloudNormals[i].x;
+		float ny = targetCloudNormals[i].y;
+		float nz = targetCloudNormals[i].z;
+
+		Vector3D p = Vector3D(px, py, pz);
+		Vector3D n = Vector3D(nx, ny, nz);
+
+		positions[baseLevel][i] = p;
+		normals[baseLevel][i] = n;
+	}
+
 
 	neighbourHoods[baseLevel]  = new NeighbourHood (positions[baseLevel], nofSelectedSurfels);
 
@@ -1102,12 +1159,12 @@ void Parameterization::clearMultiGrid() {
 		delete[] normals;
 		normals = 0;
 	}
-
+/*
 	if (selectedSurfels != 0) {
 		delete[] selectedSurfels;
 		selectedSurfels = 0;
 	}
-
+//*/
 	if (uvCoordinates != 0) {
 		delete[] uvCoordinates;
 		uvCoordinates = 0;
@@ -1145,14 +1202,14 @@ void Parameterization::clearMultiGrid() {
 // *************
 // private slots
 // *************
-
+/*
 void Parameterization::handleSelectionChanged (SurfelInterface::Flag selectionFlag) {
 	
 	if (selectionFlag == SurfelInterface::SELECTED1) {
 		this->clearMultiGrid();
 	}
 }
-
+//*/
 
 
 

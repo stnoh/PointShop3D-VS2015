@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="DataStructures">
+      <UniqueIdentifier>{b7840190-36af-493e-8628-8f5fc299fda6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataTypes">
+      <UniqueIdentifier>{cfb7c924-cfe9-434e-b491-4a1d00feff56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ParameterizationTool">
+      <UniqueIdentifier>{9e91d46e-1d69-4b37-aa97-adbc4e801390}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MagicSoft">
+      <UniqueIdentifier>{36d91ea3-95de-4f4c-b765-b35b09dd562c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main_PointShop3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ToolBars\StandardToolBar\ParameterizationTool\src\SparseLeastSquares.cpp">
+      <Filter>ParameterizationTool</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ToolBars\StandardToolBar\ParameterizationTool\src\MultiGridLevel.cpp">
+      <Filter>ParameterizationTool</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ToolBars\StandardToolBar\ParameterizationTool\src\Parameterization.cpp">
+      <Filter>ParameterizationTool</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utilities\MagicSoft\MgcEigen.cpp">
+      <Filter>MagicSoft</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utilities\MagicSoft\MgcMath.cpp">
+      <Filter>MagicSoft</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DataTypes\src\Vector3D.cpp">
+      <Filter>DataTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\DataStructures\src\Cluster.cpp">
+      <Filter>DataStructures</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\DataStructures\src\kdTree.cpp">
+      <Filter>DataStructures</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\DataStructures\src\NeighbourHood.cpp">
+      <Filter>DataStructures</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\DataStructures\src\PriorityQueue.cpp">
+      <Filter>DataStructures</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ToolBars\StandardToolBar\ParameterizationTool\src\SparseLeastSquares.h">
+      <Filter>ParameterizationTool</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ToolBars\StandardToolBar\ParameterizationTool\src\MultiGridLevel.h">
+      <Filter>ParameterizationTool</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ToolBars\StandardToolBar\ParameterizationTool\src\Parameterization.h">
+      <Filter>ParameterizationTool</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Utilities\MagicSoft\MgcEigen.h">
+      <Filter>MagicSoft</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Utilities\MagicSoft\MagicFMLibType.h">
+      <Filter>MagicSoft</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Utilities\MagicSoft\MgcMath.h">
+      <Filter>MagicSoft</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Utilities\MagicSoft\MgcRTLib.h">
+      <Filter>MagicSoft</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Utilities\src\Common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DataTypes\src\MyDataTypes.h">
+      <Filter>DataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DataTypes\src\Vector3D.h">
+      <Filter>DataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\DataStructures\src\Cluster.h">
+      <Filter>DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\DataStructures\src\kdTree.h">
+      <Filter>DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\DataStructures\src\NeighbourHood.h">
+      <Filter>DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\DataStructures\src\PriorityQueue.h">
+      <Filter>DataStructures</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Utilities\MagicSoft\MgcEigen.inl">
+      <Filter>MagicSoft</Filter>
+    </None>
+    <None Include="src\Utilities\MagicSoft\MgcMath.inl">
+      <Filter>MagicSoft</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -29,7 +29,7 @@
 #ifndef __NeighbourHood_H_
 #define __NeighbourHood_H_
 
-#include <qobject.h>	// simply for definition of unsigned int
+//#include <qobject.h>	// simply for definition of unsigned int
 
 #include "../../../DataTypes/src/Vector3D.h"
 #include "../../src/CoreDLL.h"

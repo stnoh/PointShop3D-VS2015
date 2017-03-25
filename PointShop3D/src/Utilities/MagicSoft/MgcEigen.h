@@ -13,7 +13,7 @@
 #ifndef MGCEIGEN_H
 #define MGCEIGEN_H
 
-#include "../src/UtilitiesDLL.h"
+//#include "../src/UtilitiesDLL.h"
 
 
 #include "MgcMath.h"
@@ -21,7 +21,7 @@
 namespace Mgc {
 
 
-class UTILITIES_API MAGICFM Eigen
+class MAGICFM Eigen
 {
 public:
     Eigen (int iSize);

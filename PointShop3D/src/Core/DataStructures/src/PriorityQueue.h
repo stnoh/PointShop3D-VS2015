@@ -31,6 +31,9 @@
 
 #include <vector>
 
+#include <assert.h>
+#define ASSERT assert
+
 /**
  * Fix sized maximum priority queue 
  *

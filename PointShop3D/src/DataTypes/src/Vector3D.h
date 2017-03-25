@@ -45,7 +45,7 @@
 // 3D vector
 //
 
-class DATATYPES_API Vector3D {
+class Vector3D {
 
 public:
 

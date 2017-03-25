@@ -29,7 +29,7 @@
 #ifndef __CLUSTER_H_
 #define __CLUSTER_H_
 
-#include <qobject.h>	// simply for defintion of uint
+//#include <qobject.h>	// simply for defintion of uint
 
 #include "../../../DataTypes/src/Vector3D.h"
 #include "../../src/CoreDLL.h"

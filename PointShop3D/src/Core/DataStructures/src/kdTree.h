@@ -31,7 +31,7 @@
 
 #include "../../../DataTypes/src/Vector3D.h"
 #include "PriorityQueue.h"
-#include "../../src/CoreDLL.h"
+//#include "../../src/CoreDLL.h"
 #include <vector>
 
 #define SQR(x) ((x)*(x))
@@ -126,11 +126,11 @@ public:
 	 * @param maxBucketSize
 	 *			number of points per bucket
 	 */
-	CORE_API KdTree(const Vector3D *positions, const unsigned int nOfPositions, const unsigned int maxBucketSize);
+	KdTree(const Vector3D *positions, const unsigned int nOfPositions, const unsigned int maxBucketSize);
 	/**
 	 * Destructor
 	 */
-	CORE_API ~KdTree();
+	~KdTree();
 
 	/**
 	 * look for the nearest neighbours at <code>position</code>
@@ -138,7 +138,7 @@ public:
 	 * @param position
 	 *			the position of the point to query with
 	 */
-	CORE_API void queryPosition(const Vector3D &position);
+	void queryPosition(const Vector3D &position);
 	/**
 	 * look for the nearest neighbours with a maximal squared distance <code>maxSqrDistance</code>. 
 	 * If the set number of neighbours is smaller than the number of neighbours at this maximum distance, 
@@ -151,14 +151,14 @@ public:
 	 *			the maximal squared distance of a nearest neighbour
 	 *			
 	 */
-	CORE_API void queryRange(const Vector3D &position, const float maxSqrDistance);
+	void queryRange(const Vector3D &position, const float maxSqrDistance);
 	/**
 	 * set the number of nearest neighbours which have to be looked at for a query
 	 *
 	 * @params newNOfNeighbours
 	 *			the number of nearest neighbours
 	 */
-	CORE_API void setNOfNeighbours (const unsigned int newNOfNeighbours);
+	void setNOfNeighbours (const unsigned int newNOfNeighbours);
 	/**
 	 * get the index of the i-th nearest neighbour to the query point
 	 * i must be smaller than the number of found neighbours
@@ -167,7 +167,7 @@ public:
 	 *			index of the nearest neighbour
 	 * @return the index of the i-th nearest neighbour
 	 */
-	CORE_API inline unsigned int getNeighbourPositionIndex (const unsigned int i) const;
+	inline unsigned int getNeighbourPositionIndex (const unsigned int i) const;
 	/** 
 	 * get the position of the i-th nearest neighbour
 	 * i must be smaller than the number of found neighbours
@@ -176,7 +176,7 @@ public:
 	 *			index of the nearest neighbour
 	 * @return the position of the i-th nearest neighbour
 	 */
-	CORE_API inline Vector3D const& getNeighbourPosition(const unsigned int i) const;
+	inline Vector3D const& getNeighbourPosition(const unsigned int i) const;
 	/**
 	 * get the squared distance of the query point and its i-th nearest neighbour
 	 * i must be smaller than the number of found neighbours
@@ -185,7 +185,7 @@ public:
 	 *			index of the nearest neighbour
 	 * @return the squared distance to the i-th nearest neighbour
 	 */
-	CORE_API inline float const& getSquaredDistance (const unsigned int i) const;
+	inline float const& getSquaredDistance (const unsigned int i) const;
 	/**
 	 * get the number of found neighbours
 	 * Generally, this is equal to the number of query neighbours
@@ -193,7 +193,7 @@ public:
 	 *
 	 * @return the number of found neighbours
 	 */
-	CORE_API inline unsigned int const& getNOfFoundNeighbours() const;
+	inline unsigned int const& getNOfFoundNeighbours() const;
 
 	/**
 	 * get the number of query neighbors
@@ -202,7 +202,7 @@ public:
 	 *
 	 * @return the number of querye neighbours
 	 */
-	CORE_API inline unsigned int const& getNOfQueryNeighbours() const;
+	inline unsigned int const& getNOfQueryNeighbours() const;
 
 protected:
 	/**

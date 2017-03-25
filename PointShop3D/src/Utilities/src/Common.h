@@ -29,7 +29,7 @@
 #ifndef __COMMON_H_
 #define __COMMON_H_
 
-#include <qcolor.h>
+//#include <qcolor.h>
 
 #include <float.h>
 #include <math.h>
@@ -50,9 +50,11 @@ namespace Constants {
 	// very small number
 	const float EPSILON2 = 0.00001f;
 
-	const QColor TOOLBAR_BACKGROUND = QColor (220, 205, 180);
+//	const QColor TOOLBAR_BACKGROUND = QColor (220, 205, 180);
 		
 }
+
+typedef unsigned int uint;
 
 
 #endif	// __COMMON_H_
