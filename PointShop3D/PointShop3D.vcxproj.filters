@@ -27,9 +27,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main_PointShop3D.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\ToolBars\StandardToolBar\ParameterizationTool\src\SparseLeastSquares.cpp">
       <Filter>ParameterizationTool</Filter>
     </ClCompile>
@@ -59,6 +56,9 @@
     </ClCompile>
     <ClCompile Include="src\Core\DataStructures\src\PriorityQueue.cpp">
       <Filter>DataStructures</Filter>
+    </ClCompile>
+    <ClCompile Include="PointShop3D.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -103,6 +103,12 @@
     </ClInclude>
     <ClInclude Include="src\Core\DataStructures\src\PriorityQueue.h">
       <Filter>DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GLFW_Viewer3D-VS2015\PointShop3D_test\DataTypes\DataTypesDLL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PointShop3D.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
