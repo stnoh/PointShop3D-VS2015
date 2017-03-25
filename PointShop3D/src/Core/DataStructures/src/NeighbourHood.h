@@ -32,7 +32,7 @@
 //#include <qobject.h>	// simply for definition of unsigned int
 
 #include "../../../DataTypes/src/Vector3D.h"
-#include "../../src/CoreDLL.h"
+//#include "../../src/CoreDLL.h"
 #include "../../../Utilities/MagicSoft/MgcEigen.h"
 #include "../../../Utilities/MagicSoft/MgcEigen.h"
 
@@ -57,7 +57,7 @@ public:
 	 * @see #setPositions
 	 *
 	 */
-	CORE_API NeighbourHood (const unsigned int bucketSize = 10);
+	NeighbourHood (const unsigned int bucketSize = 10);
 	/**
 	 * Creates this <code>NeighbourHood</code> structure, based on the <code>positions</code> array
 	 * which contains <code>nofPositions</code> positions. The <code>positions</code> must be
@@ -70,12 +70,12 @@ public:
 	 * @param bucketSize
 	 *		  maximum number of elements in a bucket
 	 */
-	CORE_API NeighbourHood (const Vector3D *positions, const unsigned int nofPositions, const unsigned int bucketSize = 10);
+	NeighbourHood (const Vector3D *positions, const unsigned int nofPositions, const unsigned int bucketSize = 10);
 
 	/**
 	 * Destroys this <code>NeighbourHood</code>. The <code>positions</code> are <em>not</em> <code>delete</code>d. 
 	 */
-	CORE_API ~NeighbourHood();
+	~NeighbourHood();
 
 	/**
 	 * sets the maximum query squared distance for range queries
@@ -87,14 +87,14 @@ public:
 	 * @see #clearMaxQuerySqrDistance
 	 * @see #getNofFoundNeighbours
 	 */
-	CORE_API void setMaxQuerySqrDistance(float maxSqrDist);
+	void setMaxQuerySqrDistance(float maxSqrDist);
 	/**
 	 * sets the maximum query distance back to 'no distance'.
 	 * If no distance is specified, a 'normal query will performed
 	 *
 	 * @see #setMaxQuerySqrDistance
 	 */
-	CORE_API void clearMaxQueryDistance();
+	void clearMaxQueryDistance();
 
 	/**
 	 * Sets the <code>newPositions</code> for which the neighbourhood has to be calculated.
@@ -104,7 +104,7 @@ public:
 	 * @param nofPositions
 	 *        the number of points in <code>newPositions</code>
 	 */
-	CORE_API void setPositions (const Vector3D *newPositions, const unsigned int nofPositions);
+	void setPositions (const Vector3D *newPositions, const unsigned int nofPositions);
 
 	/**
 	 * Returns the points for which the neighbourhood is to be calculated.
@@ -112,7 +112,7 @@ public:
 	 * @return a pointer to an array of <code>Vector3D</code> points
 	 * @see #getNofPositions
 	 */
-	CORE_API const Vector3D *getPositions() const;
+	const Vector3D *getPositions() const;
 
 	/**
 	 * Returns the number of points.
@@ -120,7 +120,7 @@ public:
 	 * @return the number of points
 	 * @see #getPositions
 	 */
-	CORE_API unsigned int getNofPositions() const;	
+	unsigned int getNofPositions() const;	
 
 	/**
 	 * Sets the number of neighbours which are to be calculated.
@@ -128,21 +128,21 @@ public:
 	 * @param newNofNeighbours
 	 *        the number of neighbours which are to be calculated
 	 */
-	CORE_API void setNofNeighbours (const unsigned int newNofNeighbours);
+	void setNofNeighbours (const unsigned int newNofNeighbours);
 
 	/**
 	 * Returns the number of neighbours which are to be calculated.
 	 *
 	 * @return the number of neighbours which are to be calculated
 	 */
-	CORE_API unsigned int getNofNeighbours() const;
+	unsigned int getNofNeighbours() const;
 	/**
 	 * returns the number of found neighbours
 	 * Generally, this is equal to the number of query neighbours
 	 * except for range queries (if a maximum distance is specified), 
 	 * where this number may be smaller than the number of query neigbhbours
 	 */
-	CORE_API unsigned int getNofFoundNeighbours();
+	unsigned int getNofFoundNeighbours();
 
 	/**
 	 * Sets the <code>newSourcePoint</code> for which the neighbours are to be calculated.
@@ -150,14 +150,14 @@ public:
 	 * @param newSourcePoint
 	 *        a <code>Vector3D</code> point for which the neighbours are to be calculated
 	 */
-	CORE_API void setSourcePoint (const Vector3D newSourcePoint);
+	void setSourcePoint (const Vector3D newSourcePoint);
 
 	/**
 	 * Returns the source point for which the neighbours are to be calculated.
 	 *
 	 * @return a <code>Vector3D</code> point for which the neighbours are to be calculated
 	 */
-	CORE_API Vector3D getSourcePoint() const;
+	Vector3D getSourcePoint() const;
 
 	/**
 	 * Returns an index into the <code>positions</code> array of the <code>neighbourIndex</code>-th neighbour
@@ -170,7 +170,7 @@ public:
 	 * @see #setSourcePoint
 	 * @see #getNofNeighbours
 	 */
-	CORE_API unsigned int getNeighbourPositionIndex (const unsigned int neighbourIndex);
+	unsigned int getNeighbourPositionIndex (const unsigned int neighbourIndex);
 
 	/**
 	 * Returns the position of the <code>neighbourIndex</code>-th neighbour
@@ -183,7 +183,7 @@ public:
 	 * @see #setSourcePoint
 	 * @see #getNofNeighbours
 	 */
-	CORE_API Vector3D getNeighbourPosition (const unsigned int neighbourIndex);
+	Vector3D getNeighbourPosition (const unsigned int neighbourIndex);
 	
 	/**
 	 * Returns an array which contains the squared distances of all neighbours of the point
@@ -194,7 +194,7 @@ public:
 	 * @see #setSourcePoint
 	 * @see #getNofNeighbours
 	 */
-	CORE_API const float *getSquaredDistances();
+	const float *getSquaredDistances();
 
 	/**
 	 * Returns the squared distance between the <code>neighbourIndex</code>-th neighbour
@@ -208,7 +208,7 @@ public:
 	 * @see #setSourcePoint
 	 * @see #getNofNeighbours
 	 */
-	CORE_API float getSquaredDistance (const unsigned int neighbourIndex);
+	float getSquaredDistance (const unsigned int neighbourIndex);
 	
 	/**
 	 * computes an approximation of the normal vector at the source point using PCA.
@@ -220,7 +220,7 @@ public:
 	 * @see #setSourcePoint
 	 * @see #setNofNeighbours
 	 */
-	CORE_API Vector3D computeNormal ();
+	Vector3D computeNormal ();
 
 	/**
 	 * computes the variation at the source point using PCA.
@@ -232,7 +232,7 @@ public:
 	 * @see #setSourcePoint
 	 * @see #setNofNeighbours
 	 */
-	CORE_API float computeVariation ();
+	float computeVariation ();
 
 private:
 	

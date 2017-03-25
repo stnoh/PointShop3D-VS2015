@@ -1,2 +1,0 @@
-"Build" this project as to install the bitmaps. Note that if you add more bitmaps to the
-"Bitmaps" directory you have to force a rebuild of this project as to install them as well.

@@ -32,7 +32,7 @@
 //#include <qobject.h>	// simply for defintion of uint
 
 #include "../../../DataTypes/src/Vector3D.h"
-#include "../../src/CoreDLL.h"
+//#include "../../src/CoreDLL.h"
 #include "NeighbourHood.h"
 
 /**
@@ -62,8 +62,8 @@ public:
 	 * @param minimumClusterSize
 	 *        the minimum number of points which should be put together into a new cluster
 	 */
-	CORE_API Cluster (NeighbourHood *neighbourHood, const Vector3D *normals, const uint minimumClusterSize);
-	CORE_API ~Cluster();
+	Cluster (NeighbourHood *neighbourHood, const Vector3D *normals, const uint minimumClusterSize);
+	~Cluster();
 
 	/**
 	 * Sets a <code>newNeighbourHood</code> for which the clustering is to be calculated.
@@ -76,14 +76,14 @@ public:
 	 *        a pointer to the new <code>NeighbourHood</code> to be clustered
 	 * @see #setNormals
 	 */
-	CORE_API void setNeighbourHood (NeighbourHood *newNeighbourHood);
+	void setNeighbourHood (NeighbourHood *newNeighbourHood);
 
 	/**
 	 * Returns the <code>NeighbourHood</code> which is clustered.
 	 *
 	 * @return a pointer to the <code>NeighbourHood</code> to be clustered
 	 */
-	CORE_API NeighbourHood *getNeighbourHood() const;
+	NeighbourHood *getNeighbourHood() const;
 
 	/**
 	 * Sets the <code>newNormals</code> which belong to the <code>NeighbourHood</code> being clustered.
@@ -96,14 +96,14 @@ public:
 	 *        a pointer to the new <code>NeighbourHood</code> to be clustered
 	 * @see #setNormals
 	 */
-	CORE_API void setNormals (const Vector3D *newNormals);
+	void setNormals (const Vector3D *newNormals);
 
 	/**
 	 * Returns the normals of the <code>NeighbourHood</code> which is clustered.
 	 *
 	 * @return a pointer to a <code>Vector3D</code> array which contains the normals
 	 */
-	CORE_API const Vector3D *getNormals() const;
+	const Vector3D *getNormals() const;
 
 	/**
 	 * Sets the minimum number of points in a cluster.
@@ -111,14 +111,14 @@ public:
 	 * @param newMinimumClusterSize
 	 *        the new mimimum cluster size
 	 */
-	CORE_API void setMinimumClusterSize (const uint newMinimumClusterSize);
+	void setMinimumClusterSize (const uint newMinimumClusterSize);
 
 	/**
 	 * Returns the minimum number of points in a cluster.
 	 *
 	 * @return the mimimum cluster size
 	 */
-	CORE_API uint getMinimumClusterSize() const;
+	uint getMinimumClusterSize() const;
 
 	/**
 	 * Clusters the point array used by the <code>neighbourHood</code> by putting about
@@ -138,7 +138,7 @@ public:
 	 *        the resulting number of clusters (that is the size of the <code>clusterPoints</code> and
 	 *        <code>normals</code> array)
 	 */
-	CORE_API void calculate (Vector3D **clusterPoints, Vector3D **clusterNormals, uint *nofClusters);
+	void calculate (Vector3D **clusterPoints, Vector3D **clusterNormals, uint *nofClusters);
 
 	/**
 	 * Returns the position index of the parent of the point specified by the <code>positionIndex</code>.
@@ -150,7 +150,7 @@ public:
 	 *        <code>NeighbourHood::getNofPositions</code>
 	 * @return the position index of the parent of the point specified by <code>positionIndex</code>
 	 */
-	CORE_API uint getParentPositionIndex (const uint positionIndex);	
+	uint getParentPositionIndex (const uint positionIndex);	
 
 private:
 

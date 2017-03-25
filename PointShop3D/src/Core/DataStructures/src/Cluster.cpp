@@ -29,7 +29,7 @@
 #include <list>
 
 #include "../../../DataTypes/src/Vector3D.h"
-#include "../../src/CoreDLL.h"
+//#include "../../src/CoreDLL.h"
 #include "NeighbourHood.h"
 #include "Cluster.h"
 

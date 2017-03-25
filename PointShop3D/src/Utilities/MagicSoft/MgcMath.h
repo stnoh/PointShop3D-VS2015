@@ -16,7 +16,7 @@
 #include "MagicFMLibType.h"
 #include "MgcRTLib.h"
 
-#include "../src/UtilitiesDLL.h"
+//#include "../src/UtilitiesDLL.h"
 
 
 namespace Mgc {
